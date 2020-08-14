@@ -1339,6 +1339,10 @@ ul.actions.fit.stacked {
 
 @media screen and (max-width: 480px) {
 
+  body::before{
+    background: #040404 top right no-repeat;
+  }
+  
   ul.actions:not(.fixed) {
     -moz-flex-direction: column;
     -webkit-flex-direction: column;
