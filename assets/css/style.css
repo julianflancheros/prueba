@@ -20,6 +20,7 @@ body::before {
   content: "";
   position: fixed;
   background: #040404 url("../img/bg.jpg") top right no-repeat;
+  /*background: #040404 url("../img/bg_moviles.jpg") top right no-repeat;*/
   background-size: cover;
   left: 0;
   right: 0;
@@ -1337,11 +1338,12 @@ ul.actions.fit.stacked {
   width: 100%;
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 
   body::before{
-    background: #040404 top right no-repeat;
+    background: #040404 url("../img/bg_moviles.jpg") center no-repeat;
   }
+
 
   ul.actions:not(.fixed) {
     -moz-flex-direction: column;
