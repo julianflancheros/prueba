@@ -1342,7 +1342,6 @@ ul.actions.fit.stacked {
 
   body::before{
     background: #040404;
-    /*background: #040404 url("../img/bg_moviles_2.jpg") center no-repeat;*/
   }
 
   ul.actions:not(.fixed) {
