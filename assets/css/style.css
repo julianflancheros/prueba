@@ -1341,10 +1341,9 @@ ul.actions.fit.stacked {
 @media only screen and (max-width: 480px) {
 
   body::before{
-    /*background: #040404;*/
-    background: #040404 url("../img/bg_moviles.jpg") center no-repeat;
+    background: #040404;
+    /*background: #040404 url("../img/bg_moviles_2.jpg") center no-repeat;*/
   }
-
 
   ul.actions:not(.fixed) {
     -moz-flex-direction: column;
