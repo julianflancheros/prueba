@@ -608,7 +608,7 @@ section .container {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid #18d26e /*rgba(255, 255, 255, 0.2);*/;
   position: relative;
 }
 
@@ -1092,7 +1092,7 @@ section .container {
 
 .portfolio-details .container {
   padding-top: 20px;
-  padding-bottom: 40px;
+  /*padding-bottom: 40px;*/
 }
 
 .portfolio-details .portfolio-title {
