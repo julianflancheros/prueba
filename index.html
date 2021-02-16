@@ -36,7 +36,7 @@
   <header id="header" class="header-tops">
     <div class="container">
         <h1><a href="index.html">Julian Lancheros</a></h1>
-        <h2>I'm from Bogota, and I'm passionate about <span>design and engineering</span></h2>
+        <h2>I'm passionate about <span>design and engineering</span></h2>
         <!--<h2>I'm a passionate <span>design and engineering</span> from Bogotá</h2>-->
 
       <nav class="nav-menu d-none d-lg-block">
@@ -891,46 +891,71 @@
       -->
       </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-        <div class="form-row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-            <div class="validate"></div>
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://hotmail.us1.list-manage.com/subscribe/post?u=eb68810c435dc2ea968746b61&amp;id=b547051efb" method="post" role="form" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate php-email-form mt-4" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+
+            <div class="form-row">
+              <div class="mc-field-group col-md-6 form-group">
+                <input for="mce-FNAME" type="text" value="" name="FNAME" class="form-control" id="name mce-FNAME" placeholder="Your First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="mc-field-group col-md-6 form-group">
+                <input for="mce-LNAME" type="text" value="" name="LNAME" class="form-control" id="name mce-LNAME" placeholder="Your Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+            </div>
+
+            <div class="mc-field-group form-group">
+              <input for="mce-MMERGE7" type="text" class="form-control" name="MMERGE7" id="mce-MMERGE7" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+
+            <div class="mc-field-group form-group">
+              <input for="mce-EMAIL" type="text" value="" name="EMAIL" class="required email form-control" id="name mce-EMAIL" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+              <div class="validate"></div>
+            </div>
+
+            <div class="mc-field-group">
+              <input for="mce-MMERGE6" id="mce-MMERGE6" class="form-control" type="text" name="MMERGE6" value="" data-rule="required" data-msg="Please write something for us" placeholder="Message">
+              <div class="validate"></div>
+            </div>
+
+            <div class="mc-field-group size1of2 form-group">
+            	<label for="mce-BIRTHDAY-month">Birthday </label>
+            	<div class="datefield">
+            		<span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> /
+            		<span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span>
+            		<span class="small-meta nowrap">( mm / dd )</span>
+            	</div>
+            </div>
+              <div id="mce-responses" class="clear">
+      		        <div class="response" id="mce-error-response" style="display:none"></div>
+      		        <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
           </div>
-          <div class="col-md-6 form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-            <div class="validate"></div>
+
+          <div class="mb-3">
+            <div class="loading">Loading <br> Your message will be sent in a few moments</div>
+            <!--<div class="error-message"></div>-->
+            <div class="sent-message">Your message has been sent. Thank you!</div>
           </div>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-          <div class="validate"></div>
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-          <div class="validate"></div>
-        </div>
-        <div class="mb-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
 
-        <!--<ul class="actions">
-          <li><input type="submit" value="Send Message" class="primary" /></li>
-          <li><input type="reset" value="Reset" /></li>
-        </ul> -->
-        <nav>
-          <ul class="actions">
-            <li><div class="text-center"><button type="submit">Send Message</button></div></li>
-            <li><div class="text-center"><button type="reset">Reset</button></div></li>
-          </ul>
-        </nav>
-
-
+          <nav>
+            <ul class="actions">
+              <li><div class="clear"><div type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"><button type="submit">Send Message</button></div></div></li>
+              <li><div class="text-center"><button type="reset">Reset</button></div></li>
+            </ul>
+          </nav>
       </form>
+    </div>
+
+      <!--End mc_embed_signup-->
 
     </div>
+
+
   </section>
   <!-- End Contact Section -->
 

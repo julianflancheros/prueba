@@ -127,6 +127,7 @@ h1, h2, h3, h4, h5, h6 {
   #header h2 {
     font-size: 20px;
     line-height: 30px;
+    text-align: center;
   }
   #header .social-links {
     margin-top: 15px;
@@ -950,13 +951,13 @@ section .container {
 
 .contact .php-email-form .validate {
   display: none;
-  color: red;
+  color: #18d26e;
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.contact .php-email-form .error-message{
   display: none;
   background: rgba(255, 255, 255, 0.08);
   background: #ed3c0d;
@@ -977,6 +978,8 @@ section .container {
   padding: 15px;
   font-weight: 600;
 }
+
+
 
 .contact .php-email-form .loading {
   display: none;
