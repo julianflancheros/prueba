@@ -21,6 +21,7 @@ body::before {
   position: fixed;
   background: #040404 url("../img/bg.jpg") top right no-repeat;
   /*background: #040404 url("../img/bg_moviles.jpg") top right no-repeat;*/
+  background-color: rgba(0,0,0,0.6) !important;
   background-size: cover;
   left: 0;
   right: 0;
@@ -46,6 +47,16 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #444444;
+  background: #35e888;
+}
+
+::selection {
+  color: #444444;
+  background: #35e888;
 }
 
 /*--------------------------------------------------------------
@@ -127,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
   #header h2 {
     font-size: 20px;
     line-height: 30px;
-    text-align: center;
+    /*text-align: center;*/
   }
   #header .social-links {
     margin-top: 15px;
@@ -138,6 +149,74 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
 }
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  /*background: url("../img/hero-bg.jpg") top center;*/
+  background-size: cover;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero h2 span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -334,7 +413,6 @@ section.section-show {
 
 section .container {
   background: #1A1919;
-
   padding: 30px;
 }
 
@@ -376,6 +454,65 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 120px 0 0 0;
+  background-color: white;
+  min-height: 40px;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    padding-top: 100px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs h2 {
+    margin: 0 0 10px 0;
+  }
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #6c757d;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1079,11 +1216,12 @@ section .container {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
-  padding-top: 40px;
+  /*padding-top: 40px;*/
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   left: 0;
@@ -1094,8 +1232,8 @@ section .container {
 }
 
 .portfolio-details .container {
-  padding-top: 20px;
-  /*padding-bottom: 40px;*/
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 .portfolio-details .portfolio-title {
@@ -1104,9 +1242,13 @@ section .container {
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+/*.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
   margin-top: 5px;
   text-align: center;
+}*/
+.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+  margin-top: 5px;
+  text-align: left;
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot {
@@ -1395,3 +1537,82 @@ ul.actions:not(.fixed) li .button.icon:before {
 }
 
 }
+
+/* PORTFOLIO IMAGES */
+.btn-portfolio {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
+  overflow: hidden;
+  /*box-shadow: 0 0 10px #c0c6c9; */
+}
+  .btn-portfolio > img {
+    transition: transform ease .3s; 
+  }
+  .btn-portfolio h4 {
+    display: block;
+    margin: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-80%, 100%);
+    color: #1A1919;
+    font-size: 25px;
+    opacity: 0;
+    transition: bottom ease .3s, opacity ease .3s; 
+  }
+  .btn-portfolio .zoom-icon {
+    background-color: #b8b8b8;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: opacity ease .3s;
+    opacity: 0; 
+  }
+    .btn-portfolio .zoom-icon > img {
+      width: 50%;
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-40%, -50%);
+      transition: top ease .3s; 
+    }
+  .btn-portfolio:hover .zoom-icon {
+    opacity: 0.75; 
+  }
+    .btn-portfolio:hover .zoom-icon > img {
+      top: 40%; }
+  .btn-portfolio:hover > img {
+    transform: scale(1.15); }
+  .btn-portfolio:hover h4 {
+    bottom: 30%;
+    opacity: 1; }
+
+    .image-container {
+      padding: 1rem; }
+    
+    #navbar img {
+      height: 100%; }
+    
+    #skillset img,
+    #experience img {
+      width: 10rem;
+      max-width: 100%;
+      transition: all ease .5s;
+      border-radius: 2rem; }
+    
+    #experience .image-container {
+      height: 20rem; }
+      #experience .image-container img {
+        width: 15rem;
+        background-color: #36bed9;
+        padding: 0.5rem; }
+        #experience .image-container img:hover {
+          border-radius: 0rem; }
+          .img-responsive {
+            display: block;
+            max-width: 100%;
+            height: auto; }
