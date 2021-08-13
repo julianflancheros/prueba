@@ -49,7 +49,7 @@
 
   // Back to top button
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 300) {
       $('.back-to-top').fadeIn('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
@@ -71,5 +71,32 @@
       });
     }
   });
+
+    // Init AOS
+    function aos_init() {
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out-back",
+        once: true
+      });
+    }
+    $(window).on('load', function() {
+      aos_init();
+    });
+
+    // jQuery counterUp
+  $('[data-toggle="counter-up"]').counterUp({
+    delay: 10,
+    time: 1000
+  });
+
+  app.get('/', function(req, res){
+    // print host
+    console.log(req.headers.host);
+ 
+    // print path and request parameters
+    console.log(req.url);
+    res.end();
+ });
 
 })(jQuery);

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details TPi Web Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/stylePorfolio.css" rel="stylesheet">
+
+</head>
+
+<style>
+    /*body{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }*/
+    body::before {
+        background: #040404 !important;
+    }
+    .box__ghost .box__ghost-container {
+            background: #fff;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px 100px 0 0;
+            position: relative;
+            margin: 0 auto;
+            animation: upndown 3s ease-in-out infinite;
+        }
+
+        .box__ghost .box__ghost-container .box__ghost-eyes {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            height: 12px;
+            width: 70px;
+        }
+
+        .box__ghost .box__ghost-container .box__ghost-eyes .box__eye-left {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 10px;
+            position: absolute;
+            left: -12px;
+            -webkit-animation:name 3s infinite;
+        }
+
+        .box__ghost .box__ghost-container .box__ghost-eyes .box__eye-right {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 10px;
+            position: absolute;
+            right: 12px;
+            -webkit-animation:name 3s infinite;
+        }
+
+        .box__ghost .box__ghost-container .box__ghost-bottom {
+            display: flex;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .box__ghost .box__ghost-container .box__ghost-bottom div {
+            flex-grow: 1;
+            position: relative;
+            top: -10px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: #fff;
+        }
+
+        .box__ghost .box__ghost-container .box__ghost-bottom div:nth-child(2n) {
+            top: -12px;
+            margin: 0 -0px;
+            border-top: 15px solid #1a1919;
+            background: transparent;
+        }
+
+        .box__ghost .box__ghost-shadow {
+            height: 20px;
+            box-shadow: 0 50px 15px 5px #18D26E;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: smallnbig 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 7.5em;
+            margin-top: 15px;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        .btn {
+            z-index: 1;
+            overflow: hidden;
+            background: transparent;
+            position: relative;
+            padding: 8px 50px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+            letter-spacing: 2px;
+            -webkit-transition: 0.2s ease;
+            transition: 0.2s ease;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 45px;
+        }
+        .btn.green {
+            border: 4px solid #ffffff1a;
+            color: #fff;
+            background-color: #ffffff1a;
+        }
+        .btn.green:hover {
+            color: var(--white);
+            border: 4px solid #18D26E;
+            background: #18D26E;
+            -webkit-transition: 0.2s ease;
+            transition: 0.2s ease;
+        }
+        .btn.green:hover:before {
+            width: 100%;
+        }
+        #contenText{
+            padding-top: 10%;
+        }
+
+        @keyframes name {
+            0% {
+                background-color:white;
+            }
+            100% {
+                background-color:#18D26E;
+            }
+        }
+
+        @keyframes upndown {
+            0% {
+                transform: translateY(5px);
+            }
+            50% {
+                transform: translateY(15px);
+            }
+            100% {
+                transform: translateY(5px);
+            }
+        }
+
+        @keyframes smallnbig {
+            0% {
+                width: 90px;
+            }
+            50% {
+                width: 100px;
+            }
+            100% {
+                width: 90px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            #text-404{
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px){
+            #text-404{
+                padding-top: 90px;
+                text-align: center;
+            }
+        }
+
+</style>
+
+<body>
+    <main id="main">
+    <section class="breadcrumbs"></section>
+
+    <!-- ======= Comtainer 404 Section ======= -->
+    <section class="portfolio-details">
+        <div class="container">
+  
+            <div class="row">
+                <div class="col-lg-5 col-md-12 align-self-center">
+                    <div class="box__ghost">
+                        <div class="box__ghost-container">
+                            <div class="box__ghost-eyes">
+                                <div class="box__eye-left"></div>
+                                <div class="box__eye-right"></div>
+                            </div>
+                            <div class="box__ghost-bottom">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="box__ghost-shadow"></div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 align-self-center" id="text-404">
+
+                    <h1 data-toggle="counter-up">404</h1>
+                    <div class="section-title">
+                        <p>UH OH! A wild <span data-toggle="counter-up">404</span> - PAGE appeared!</p>
+                    </div>
+                    <p>
+                        This means that the your browser was able to communicate with your given server, <br> but the server could not find
+                        what was requested.<br><br>
+                        * Don't panic.<br>
+                        * Make sure the url is correct.<br>
+                    </p>
+                    <h4>You can go back to the home page by clicking on the button below</h4>
+                    <a href="index.html">
+                        <button class="btn green">Back to homepage</button>
+                    </a>
+                </div>
+            </div>
+  
+        </div>
+        
+      </section><!-- End Portfolio Details Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <div id="footer" class="text-center">
+      <div class="container">
+  
+        <small><span>Developed and designed by&nbsp;</span><a href='mailto:julianfel_@hotmail.com'>Julianflancheros</a>. &copy; <script type="text/javascript">
+          var d = new Date()
+          document.write(d.getFullYear())
+          </script><span class="min-footer">. All rights reserved.</span></small>
+  
+      </div>
+    </div><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <div id="preloader"></div>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="assets/js/mainPorfolio.js"></script>
+  <!--<script>
+    //based on https://dribbble.com/shots/3913847-404-page
+
+    var pageX = $(document).width();
+    var pageY = $(document).height();
+    var mouseY = 0;
+    var mouseX = 0;
+
+    $(document).mousemove(function (event) {
+        //verticalAxis
+        mouseY = event.pageY;
+        yAxis = (pageY / 2 - mouseY) / pageY * 300;
+        //horizontalAxis
+        mouseX = event.pageX / -pageX;
+        xAxis = -mouseX * 50 - 50;
+
+        $('.box__ghost-eyes').css({'transform': 'translate(' + xAxis + '%,-' + yAxis + '%)'});
+
+        //console.log('X: ' + xAxis);
+
+    });</script>-->
+
+</body>
+
+</html>
