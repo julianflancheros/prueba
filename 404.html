@@ -152,7 +152,9 @@
         #contenText{
             padding-top: 10%;
         }
-
+        #demo{
+            color: #18D26E;
+        }
         @keyframes name {
             0% {
                 background-color:white;
@@ -236,7 +238,8 @@
                     </div>
                     <p>
                         This means that the your browser was able to communicate with your given server, <br> but the server could not find
-                        what was requested.<br><br>
+                        what was requested. Your search was <span id="demo"></span> and this page are missing
+                        <br><br>
                         * Don't panic.<br>
                         * Make sure the url is correct.<br>
                     </p>
@@ -304,6 +307,11 @@
         //console.log('X: ' + xAxis);
 
     });</script>-->
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        ": " + window.location.href;
+    </script>
 
 </body>
 

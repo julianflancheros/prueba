@@ -90,13 +90,5 @@
     time: 1000
   });
 
-  app.get('/', function(req, res){
-    // print host
-    console.log(req.headers.host);
- 
-    // print path and request parameters
-    console.log(req.url);
-    res.end();
- });
 
 })(jQuery);
