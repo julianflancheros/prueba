@@ -237,7 +237,7 @@
                     </div>
                     <p>
                         This means that the your browser was able to communicate with your given server, <br> but the server could not find
-                        what was requested. Your search was <span id="demo"></span> and this page are missing
+                        what was requested. Your search was: <span id="demo"></span> and this page are missing
                         <br><br>
                         * Don't panic.<br>
                         * Make sure the url is correct.<br>
@@ -308,8 +308,7 @@
     });</script>-->
 
     <script>
-        document.getElementById("demo").innerHTML = 
-        ": " + window.location.href;
+        document.getElementById("demo").innerHTML = window.location.href;
     </script>
 
 </body>
