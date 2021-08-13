@@ -6,4 +6,4 @@ Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
 
-Link site: julianflancheros.js.org
+Link site: https://julianflancheros.js.org
