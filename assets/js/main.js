@@ -1,7 +1,7 @@
 /**
-* Template Name: Personal - v2.3.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
+* Template Name: Personal - v2.3.0 with modificactions 
+* Template available in: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+* Author: BootstrapMade.com 
 * License: https://bootstrapmade.com/license/
 */
 !(function($) {
@@ -25,13 +25,13 @@
           $("section").removeClass('section-show');
           return;
         }
-
+        /*$('body').removeClass('back-to-top');
+        console.log("se removio la clase back to top");*/
         if (!$('#header').hasClass('header-top')) {
           $('#header').addClass('header-top');
           setTimeout(function() {
             $("section").removeClass('section-show');
             $(hash).addClass('section-show');
-
           }, 350);
         } else {
           $("section").removeClass('section-show');
@@ -40,7 +40,7 @@
 
         $('html, body').animate({
           scrollTop: 0
-        }, 350);
+        }, 500);
 
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
@@ -64,7 +64,7 @@
       setTimeout(function() {
         $("section").removeClass('section-show');
         $(initial_nav).addClass('section-show');
-      }, 350);
+      }, 700);
     }
   }
 
@@ -79,6 +79,7 @@
 
     $(document).on('click', '.mobile-nav-toggle', function(e) {
       $('body').toggleClass('mobile-nav-active');
+      $('.back-to-top').hide(); 
       $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
       $('.mobile-nav-overly').toggle();
     });
@@ -95,6 +96,7 @@
     });
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
     $(".mobile-nav, .mobile-nav-toggle").hide();
+    $('.back-to-top').show();
   }
 
   // jQuery counterUp
@@ -126,6 +128,37 @@
       },
       900: {
         items: 3
+      }
+    }
+  });
+
+  // Init Owl Carousel
+  $('.owl-carousel').owlCarousel({
+    items: 4,
+    autoplay: true,
+    loop: true,
+    margin: 30,
+    dots: true,
+    responsiveClass: true,
+    responsive: {
+
+      320: {
+        items: 1
+      },
+      480: {
+        items: 2
+      },
+      600: {
+        items: 2
+      },
+      767: {
+        items: 3
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4
       }
     }
   });
@@ -182,7 +215,7 @@
   // Preloader
   $(window).on('load', function() {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
+      $('#preloader').delay(80).fadeOut('slow', function() {
         $(this).remove();
       });
     }
@@ -213,4 +246,97 @@
     aos_init();
   });
 
+//Appear the bottom light theme
+  /*$(window).scroll(function() {*/
+  $(window).ready(function(){
+    $('.change-theme').fadeIn('slow');
+    $('.change-theme').click(function(){
+      var s = $(window).scrollTop();
+      $(window).scrollTop(s);
+    });
+  });
+
+  /*$(document).ready(function(){
+    $(".change-theme").click(function(){
+      var s = $(window).scrollTop();
+      $(window).scrollTop(s);
+      console.log(s + " px");
+    });
+  });*/
+  
 })(jQuery);
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+function scrollHeader(){
+  const nav = document.getElementById('header')
+  // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+  if(this.scrollY >= 150) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+/*==================== ACCORDION SKILLS ====================*/
+/*const skillsContent = document.getElementsByClassName('skills__content'),
+      skillsHeader = document.querySelectorAll('.skills__header')
+function toggleSkills(){
+    let itemClass = this.parentNode.className
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content skills__close'
+    }
+    if(itemClass === 'skills__content skills__close'){
+        this.parentNode.className = 'skills__content skills__open'
+    }
+}
+skillsHeader.forEach((el)=>{
+    el.addEventListener('click',toggleSkills)
+})*/
+
+  // Portfolio carousel 
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide('#splide', {
+  type: 'loop',
+  focus: 'center',
+  autoplay: true,
+  updateOnMove: true,
+  arrows: false,
+  pagination: false,
+  padding: '5%',
+  breakpoints: {
+    1980: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 1,
+      
+    },
+  }
+}).mount();
+});
+
+/*==================== DARK LIGHT THEME ====================*/ 
+const themeButton = document.getElementById('theme-button')
+const lightTheme = 'light-theme'
+const iconTheme = 'icofont-moon'
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ?  'icofont-moon' : 'icofont-sun-alt'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme)
+  themeButton.classList[selectedIcon === 'icofont-sun-alt' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(lightTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
