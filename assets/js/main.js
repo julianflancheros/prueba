@@ -106,13 +106,13 @@
   });
 
   // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
+  // $('.skills-content').waypoint(function() {
+  //   $('.progress .progress-bar').each(function() {
+  //     $(this).css("width", $(this).attr("aria-valuenow") + '%');
+  //   });
+  // }, {
+  //   offset: '80%'
+  // });
 
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
@@ -340,3 +340,67 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+var skillCont = document.getElementById("listSkills-container");
+
+    var skills = [{
+      "icon": "html",
+      "name": "HTML5"
+    }, {
+      "icon": "css",
+      "name": "CSS3"
+    }, {
+      "icon": "js",
+      "name": "JavaScript"
+    }, {
+      "icon": "bootstrap",
+      "name": "Bootstrap"
+    }, {
+      "icon": "jquery",
+      "name": "JQuery"
+    }, {
+      "icon": "angular",
+      "name": "Angular  "
+    }, {
+      "icon": "react",
+      "name": "React"
+    }, {
+      "icon": "git",
+      "name": "Git & GitHub "
+    }, {
+      "icon": "node",
+      "name": "Node.js & Express"
+    }, {
+      "icon": "mongo",
+      "name": "MongoDB & Mongoose"
+    }, {
+      "icon": "npm",
+      "name": "npm & yarn"
+    }, {
+      "icon": "firebase",
+      "name": "Firebase"
+    }, {
+      "icon": "bash",
+      "name": "Bash"
+    }, {
+      "icon": "latex",
+      "name": "Latex"
+    }]
+
+    function callSkills() {
+      for (skill of skills) {
+        var item = document.createElement('div');
+        item.setAttribute('class', 'col-lg-2 col-md-3 col-4');
+        item.innerHTML =
+          `
+                <div class="">    
+                  <img class="svg-skill" src="./assets/img/skills/${skill.icon}.svg" title="${skill.name}" alt="${skill.name}">
+                  <p class="skill">${skill.name}</p>
+                </div>
+                `
+        skillCont.appendChild(item.cloneNode(true))
+
+      }
+    }
+
+    callSkills();
