@@ -832,6 +832,15 @@ section .container {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+.svg-skill{
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.listSkills-container {
+  text-align: center;
+}
+
 .skills .progress {
   height: 50px;
   display: block;
