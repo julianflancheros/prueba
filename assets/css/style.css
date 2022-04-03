@@ -972,9 +972,9 @@ section .container {
   color: var(--principalText-color);
 }
 
-.interests .icon-box:hover {
+/* .interests .icon-box:hover {
   background: rgba(255, 255, 255, 0.12);
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials
