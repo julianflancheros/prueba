@@ -387,19 +387,22 @@ var skillCont = document.getElementById("listSkills-container");
       "name": "Latex"
     }]
 
+    
     function callSkills() {
+      let delayNum = 300;
+      let i = 0;
       for (skill of skills) {
         var item = document.createElement('div');
         item.setAttribute('class', 'col-lg-2 col-md-3 col-4');
         item.innerHTML =
           `
-                <div class="">    
+                <div class="" data-aos="fade-up" data-aos-delay=${delayNum+i}>    
                   <img class="svg-skill" src="./assets/img/skills/${skill.icon}.svg" title="${skill.name}" alt="${skill.name}">
                   <p class="skill">${skill.name}</p>
                 </div>
                 `
         skillCont.appendChild(item.cloneNode(true))
-
+        i= i + 50;
       }
     }
 
