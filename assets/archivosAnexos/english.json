@@ -36,7 +36,10 @@
         "aboutInterests5": "Databases",
         "aboutInterests6": "Logistics &amp; Machinery",
         "aboutInterests7": "Digital Marketing",
-        "aboutInterests8": "Nature"
-        
+        "aboutInterests8": "Nature",
+        "contactTitle": "Contact me",
+        "contactSocialMedia": "Social Profiles",
+        "contactFormSendMessage": "Send Message",
+        "contactFormReset": "Reset"
     }
 }
