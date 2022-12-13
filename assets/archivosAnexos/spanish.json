@@ -37,6 +37,44 @@
         "aboutInterests6": "Logistica &amp; Maquinaria",
         "aboutInterests7": "Marketing Digital",
         "aboutInterests8": "Naturaleza",
+
+        "qualificationTitle": "Mi viaje personal",
+        "qualificationTitleExperience": "Experiencia Profesional",
+
+        "qualificationDateExperience1": "Marzo, 2022 - Julio 2022",
+        "qualificationTitleExperience1":"Estudiante Auxiliar en la Cátedra de Sede Jorge Elíecer Gaitán (JEG)",
+        "qualificationPlaceExperience1":
+        "Dirección academica Sede Bogotá, Universidad Nacional de Colombia",
+        "qualificationActivitiesExperience1": "<li>Diseño del sitio web de la versión 2022-1 con el cartel creado por el diseñador.</li><li>Diseñar el programa de clases siguiendo los lineamientos establecidos</li><li>Soportar clases virtuales en diferentes plataformas< /li><li>Gestioné todos los documentos para poder compartir el contenido de las sesiones con internet y la estación de radio de la universidad.</li><li>Desarrollé todo el backend para las calificaciones de los estudiantes y creé resúmenes recurrentes para cada monitor.< /li>",
+
+        
+        "qualificationDateExperience2": "Febrero, 2021 - Marzo, 2022",
+        "qualificationTitleExperience2":"Monitor de Tecnologias en Taller de Proyectos Interdiciplinarios (TPi)",
+        "qualificationPlaceExperience2":"Facultdad de Ingeniria, Universidad Nacional de Colombia",
+        "qualificationActivitiesExperience2": "<li>Rediseñar dos veces el sitio web con la nueva imagen creada por el diseñador.</li><li>Diseñar una nueva interfaz para reproducir videos incrustados en la página.</li><li>Rediseñar el SEO en el sitio web para que aparezca como resultado con las palabras correctas.</li><li>Reducido el número de páginas utilizadas por TPi de 800 a 600, creando grupos con información similar y creando secciones en la página principal con información importante también eliminando contenido que ya no es necesario.</li><li>Cree la página \"contacto\" en la página de TPi con un formulario para obtener retroalimentación del curso y lo conecté con el backend usando Google Apps Script.</li><li >Crear la interfaz final para el 1er \"BootCamp Iberoamericano de Innovación Abierta\" organizado por ASIBEI y actualizar todo el contenido en un solo día.</li><li>Integrar el equipo que empezó a desarrollar Quanticon Valley basado en react, usando el stack next.js y github pages en su nueva versión y diseñé el sistema de manipulación de los Innocoins, puntos de victoria en TPi Hall o f Fame.</li><li>Durante dos meses estuve a cargo de montar todo el contenido en Quanticon Valley.</li><li>Admite todos los eventos y clases virtuales en diferentes plataformas (Moodle, Meet, Zoom, etc.) , así como el contenido de estos.</li><li>Utilice hojas de cálculo para manipular todos los datos de dos grupos cada uno con más de 160 personas durante dos semestres.</li><li>Cubra todas las actividades de los monitores si alguno tuvo problemas.</li>",
+
+        "qualificationDateExperience3": "September, 2021 - Diciembre, 2021",
+        "qualificationTitleExperience3":"Desarrollador Frontend en Innovate",
+        "qualificationPlaceExperience3":"Facultad de Ingenieria, Universidad Nacional de Colombia",
+        "qualificationActivitiesExperience3": "<li>Diseño de la web con la nueva imagen creada por el diseñador</li><li>Co-rediseño de la imagen del grupo para cumplir con la normativa institucional</li>",
+
+        "qualificationDateExperience4":  "Febrero, 2021 - Agosto, 2021",
+        "qualificationTitleExperience4":"Instructor Junior",
+        "qualificationPlaceExperience4": "Unidad de Informática Facultad de Ciencias Economicas (UIFCE), Universidad Nacional de Colombia",
+        "qualificationActivitiesExperience4": "<li>Apoyé una actividad de enseñanza como instructor con 44 personas</li><li>Aprender y usar algunos softwares enfocados en FCE </li><li>Integre un equipo de más de 30 personas.</li>< li>Diseñar un sistema para motivar el estudio autónomo de todo el equipo</li>",
+        
+
+        "qualificationDateExperience5":  "Mayo, 2020 - Octubre, 2020",
+        "qualificationTitleExperience5":"Desarrollador de Marca",
+        "qualificationPlaceExperience5": "Tegidos C&S",
+        "qualificationActivitiesExperience5": "<li>Diseño de elementos visuales</li><li>Creación de la marca virtual de la empresa</li><li>Creación y diseño de la página de Facebook e Intragram de la empresa</li><li>Diseño de un boceto para el sitio web</li>",
+
+        "qualificationDateExperience6":  "Octubre, 2019",
+        "qualificationTitleExperience6":"Voluntario encargado de los aspectos tecnologicos en el 10° CONGRESO MUNDIAL PARA EL TALENTO DE LA NIÑEZ",
+        "qualificationPlaceExperience6": "Fundación ELIC, Bogotá, CO.",
+        "qualificationActivitiesExperience6": "<li>Manejé los equipos de cómputo (conexión de red, sonido y computadoras).</li><li>Organizaba las salas temáticas, la entrada y salida de personas.</li><li>Gestioné un equipo de 10 personas. </li>",
+
+
         "contactTitle": "Contacta conmigo",
         "contactSocialMedia": "Redes Sociales",
         "contactFormSendMessage": "Enviar Mensaje",

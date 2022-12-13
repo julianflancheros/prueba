@@ -37,6 +37,45 @@
         "aboutInterests6": "Logistics &amp; Machinery",
         "aboutInterests7": "Digital Marketing",
         "aboutInterests8": "Nature",
+        "qualificationTitle": "My pesonal Journey",
+        "qualificationTitleExperience": "Professional Experience",
+        "qualificationDateExperience1": "March, 2022 - July 2022",
+        "qualificationTitleExperience1":
+        "Student assistant in Cátedra Jorge Elíecer Gaitán (JEG)",
+        "qualificationPlaceExperience1":
+        "Academic Direction Bogotá Headquarters, Universidad Nacional de Colombia",
+        "qualificationActivitiesExperience1": "<li>Design of the website of version 2022-1 with the poster created by the designer.</li><li>Design the class program following the established guidelines</li><li>Support virtual classes on different platforms</li><li>Management all documents to can share the content to the sesions with internet and the radio station of the university.</li><li>Developed the entire backend for student grades and created recurring summaries for each monitor.</li>",
+
+        "qualificationDateExperience2": "February, 2021 - March, 2022",
+        "qualificationTitleExperience2":"Technology instructor in Taller de Proyectos Interdiciplinarios (TPi)",
+        "qualificationPlaceExperience2":"Engineering Faculty, Universidad Nacional de Colombia",
+
+        "qualificationActivitiesExperience2": "<li>Redesign twice of the website with the new image created by the designer.</li><li>Design a new interface to reproduce a embed videos on the page.</li><li>Redesign the SEO in the website to appear as a result with the correct words.</li><li>Reduced the number of pages used by TPi from 800 to 600, creating groups with similar information and creating sections on the main page with important information also removing content that is no longer needed.</li><li>Create the page \"contacto\" on TPi page with a form to get feed back of the course and I connected that with backend using Google Apps Script.</li><li>Create the final interface for the 1st \"BootCamp Iberoamericano de Innovación Abierta\" organized by ASIBEI and update all the content in a single day.</li><li>Integrate the team that started to develop Quanticon Valley based in react, using the stack next.js and github pages in its newest version and I designed the system of manipulate the Innocoins, victory points in TPi Hall of Fame.</li><li>For two mounth I was in charge of mounting all content in Quanticon Valley.</li><li>Supports all virtual events and classes on different platforms (Moodle, Meet, Zoom, etc), as well as the content of these.</li><li>Use spreadsheets to manipulate all the data for two groups each with 160+ people over two semesters.</li><li>Cover all the activities of the monitors if any had problems.</li>",
+
+
+        "qualificationDateExperience3": "September, 2021 - December, 2021",
+        "qualificationTitleExperience3":"Frontend developer in Innovate",
+        "qualificationPlaceExperience3":"Engineering Faculty, Universidad Nacional de Colombia",
+        "qualificationActivitiesExperience3": "<li>Design of the website with the new image created by the designer</li><li>Co-redesign of the group's image to comply with institutional regulations</li>",
+
+        "qualificationDateExperience4":  "February, 2021 - August, 2021",
+        "qualificationTitleExperience4": "Junior Instructor",
+        "qualificationPlaceExperience4": "Unidad de Informática Facultad de Ciencias Economicas (UIFCE), Universidad Nacional de Colombia",
+        "qualificationActivitiesExperience4": "<li>Supported a teach activity like a instructor with 44 persons</li><li>Learn and use some softwares focused on FCE </li><li>Integred a team of more than 30 people.</li><li>Design a system to motivate the autonomous study of the entire team</li>",
+
+        "qualificationDateExperience5":  "May, 2020 - October, 2020",
+        "qualificationTitleExperience5": "Brand Developer",
+        "qualificationPlaceExperience5": "Tegidos C&S",
+        "qualificationActivitiesExperience5": "<li>Design of visual elements</li><li>Creation of the virtual brand of the company</li><li>Creation and design of the Facebook page and Intragram of the company</li><li>Design of a sketch for the website</li>",
+
+        
+        "qualificationDateExperience6":  "October, 2019",
+        "qualificationTitleExperience6":"Technology VOLUNTARY IN 10° WORLD CONGRESS FOR CHILDHOOD TALENT",
+        "qualificationPlaceExperience6": "ELIC Foundation, Bogotá, CO.",
+        "qualificationActivitiesExperience6": "<li>Handled the computer equipments (network connection, sound and computers).</li><li>Organized the thematic rooms, the entry and exit of people.</li><li>Managed a team of 10 people.</li>",
+
+        
+        
         "contactTitle": "Contact me",
         "contactSocialMedia": "Social Profiles",
         "contactFormSendMessage": "Send Message",
