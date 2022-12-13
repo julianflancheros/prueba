@@ -1,0 +1,24 @@
+{
+    "busineesCard":{
+        "name": "Julian Lancheros",
+        "phase": "Choose only one master, <br> Nature",
+        "Job": "Full Stack Developer",
+        "mail": "julianfel_@hotmail.com",
+        "phone": "+57 321 916 7951",
+        "webPage": "julianflancheros.js.org",
+        "linkedin": "julianflancheros",
+        "mailCategory" : "Mail",
+        "phoneCategory": "Phone",
+        "websiteCategory": "Web Site",
+        "paragrah": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aspernatur quae itaque debitis veniam consequuntur repudiandae sed temporibus. Deserunt nam illum odio quam quaerat ipsa",
+        "saveContact": "Save Contact"
+    },
+    "personalPage": {
+        "dynamicGreeting": "I'm a passionate <span class=\"typed\" data-typed-items=\"about programming, about design, about nature, about engineering, about web design, to learn new things .....\"></span>",
+        "sectionHome": "Home", 
+        "sectionAbout": "About",
+        "sectionQualification": "Qualification", 
+        "sectionPortfolio": "Portfolio", 
+        "sectionContact": "Contact" 
+    }
+}
