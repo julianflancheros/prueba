@@ -14,11 +14,24 @@
         "saveContact": "Guardar contacto"
     },
     "personalPage": {
-        "dynamicGreeting": "Soy un apasionado por passionate <span class=\"typed\" data-typed-items=\"la programación, el deseño, la naturaleza, la ingenieria,el diseño web, aprender nuevas cosas .....\"></span>",
+        "dynamicGreeting": "Soy un apasionado por <span class=\"typed\" data-typed-items=\"la programación, el deseño, la naturaleza, la ingenieria,el diseño web, aprender nuevas cosas .....\"></span>",
         "sectionHome": "Inicio", 
         "sectionAbout": "Acerca de mi",
-        "sectionQualification": "Qualification", 
+        "sectionQualification": "Perfil", 
         "sectionPortfolio": "Portafolio", 
-        "sectionContact": "Contacto"
+        "sectionContact": "Contacto",
+        "aboutTitle": "Conoceme un poco",
+        "aboutProfileTitle":"Ingeniero Agricola: Diseñando soluciones para ayudar a las personas y trasformar la industria.",
+        "aboutProfileParagraph": "Soy un estudiante universitario con buenas habilidades analiticas, de gestion de proyetos y de trabajo en equipo obtenidas y pulidas a través de mi estancia en la Universidad con experiencia como desarrollador Frontend usando HTML5, CSS3 y JavaScript junto con algunos Frameworks de estos últimos para la creación de SPAs (Single-page application) responsivos y Backend usando Node y Google Apps Script; por otro lado, he trabajado con CMS (usando Joomla y Wordpress), conozco los lenguages Python, C++, R y Java. Yo considero que soy una persona proactiva, lider y determinada, lo que me ha llevado a adquirir conocimientos útiles fuera de mi profesión. <br>",
+        "aboutProfileFinalPhrase": "Si quieres aprender más acerca de mi, te invito a revisar mi página web",
+        "aboutInterests": "Cosas que me gustan",
+        "aboutInterests1": "Geomatica",
+        "aboutInterests2": "Estatistica",
+        "aboutInterests3": "Programación",
+        "aboutInterests4": "Diseño",
+        "aboutInterests5": "Bases de Datos",
+        "aboutInterests6": "Logistica &amp; Maquinaria",
+        "aboutInterests7": "Marketing Digital",
+        "aboutInterests8": "Naturaleza"
     }
 }
