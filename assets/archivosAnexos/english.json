@@ -73,7 +73,26 @@
         "qualificationTitleExperience6":"Technology VOLUNTARY IN 10° WORLD CONGRESS FOR CHILDHOOD TALENT",
         "qualificationPlaceExperience6": "ELIC Foundation, Bogotá, CO.",
         "qualificationActivitiesExperience6": "<li>Handled the computer equipments (network connection, sound and computers).</li><li>Organized the thematic rooms, the entry and exit of people.</li><li>Managed a team of 10 people.</li>",
+        "qualificationTitleEducation": "Education",
+        "qualificationTitleEducation1" :"Agricultural Engineer",
+        "qualificationDateEducation1": "August, 2019 - Present",
+        "qualificationPlaceEducation1": "Universidad Nacional de Colombia, Bogotá, CO",
+        "qualificationParagraphEducation1": "The Agricultural Engineer is professional with the ability to contribute to the generation of rural and agro-industrial infrastructure (design, design, construction, selection, planning, management and maintenance) for the production of plant and animal raw materials and their processing. <br> This program has a duration of 5 years.",
 
+
+        "qualificationTitleEducation2": "Junior Programmer",
+        "qualificationDateEducation2": "March, 2021 - December, 2021",
+        "qualificationPlaceEducation2": "Mision TIC 2022, Bogotá, CO",
+        "qualificationParagraphEducation2": "MISSION TIC 2022 is a specific training strategy in youth-oriented programming to expand opportunities in the construction of educational and occupational paths, guaranteeing the use of opportunities within the framework of economic reactivation and orange economy policies.",
+        "qualificationTitleEducation3": "Agronomic Engineer",
+        "qualificationDateEducation3": "January, 2016 - July, 2019",
+        "qualificationPlaceEducation3": "Universidad Nacional de Colombia, Bogotá, CO", 
+        "qualificationParagraphEducation3": "The Agronomic Engineer is a professional who studies the physical, chemical and biological, economic and social factors that influence or affect the production process. Its objective is to improve the quality of the processes of production and transformation of agricultural food products. <br> This program has a duration of 5 years.",
+
+        "qualificationTitleEducation4": "Financial and Accounting Assistant Technician",
+        "qualificationDateEducation4": "September, 2014 - March, 2016",
+        "qualificationPlaceEducation4": "Corporación Iberoamericana de Estudios CIES, Bogotá, CO", 
+        "qualificationParagraphEducation4": "This Degree focuses on supporting organizations with operational accounting, investment and financing resources, the preparation and presentation of accounting information, as well as the organization of the documentation generated for the financial year, in accordance with current regulations and organizational policies. <br> This program has a duration of 2.5 years.",
         
         
         "contactTitle": "Contact me",
