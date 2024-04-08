@@ -7,6 +7,12 @@
 !(function($) {
   "use strict";
 
+  // Add style a Nav Menu start page 
+  $(document).ready(function() {
+    $(".start").closest('li').addClass('active');
+    console.log( "ready!" );
+  });
+
   // Nav Menu
   $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
