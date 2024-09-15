@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Social links profile</title>
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/stylePorfolio.css" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --green-color: hsl(148, 79%, 46%); /*#19d26f*/
+      --White: hsl(0, 0%, 100%);
+      --Grey: hsl(0, 1%, 23%);
+      --DarkGrey: hsl(0, 2%, 10%); /*#1A1919*/
+      --OffBlack: hsl(0, 0%, 2%); /*#040404*/
+      --principalText-color: hsl(0, 0%, 100%); /*#fff*/
+  --body-color: hsl(0, 0%, 2%); /*#040404*/
+  --container-color: hsl(0, 2%, 10%); /*#1A1919*/
+  --container-color-light: hsl(0, 1%, 23%);
+
+  --h2title-color: hsl(0, 0%, 67%); /*#aaaaaa*/
+  --body-font: 'Open Sans', sans-serif;
+    }
+
+    .attribution {
+      margin-top: 5px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: var(--green-color)
+    }
+
+    body {
+      background-color: var(--OffBlack);
+      font-family: var(--body-font); 
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .socialLinkProfile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .socialLinkProfile_container {
+      background-color: var(--DarkGrey);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 85%;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .socialLinkProfile_image {
+      border-radius: 50%;
+      object-fit: cover;
+      width: 90px;
+      height: 90px;
+    }
+
+    .socialLinkProfile_name {
+      color: var(--White);
+      margin: 25px 0 0 0;
+      font-weight: 400;
+    }
+
+    .socialLinkProfile_location {
+      color: var(--green-color);
+      margin: 0 0 25px 0;
+    }
+
+    .socialLinkProfile_phrase {
+      color: var(--White);
+      filter: brightness(0.6);
+      margin: 0;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--White);
+    }
+
+    .socialLinkProfile_importantLinks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+    }
+
+    .linkButton {
+      width: 100%;
+      height: fit-content;
+      background-color: var(--Grey);
+      text-align: center;
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-weight: 600;
+    }
+
+    .linkButton:hover {
+      background-color: var(--green-color);
+      color: var(--OffBlack);
+    }
+
+    @media (min-width: 375px) {
+      .socialLinkProfile_container {
+        width: 320px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="socialLinkProfile">
+    <div class="socialLinkProfile_container">
+      <img class="socialLinkProfile_image" src="\assets\img\me.jpg" alt="jessica image">
+      <h2 class="socialLinkProfile_name">Julian F. Lancheros</h2>
+      <h5 class="socialLinkProfile_location">Bogotá, Colombia</h5>
+      <p class="socialLinkProfile_phrase">Agricultural Engineer: Designing systems to help people and transform the industry.</p>
+      <div class="socialLinkProfile_importantLinks">
+        <a class="linkButton" href="https://www.gitHub.com/julianflancheros">GitHub </a>
+        <a class="linkButton" href="https://www.linkedIn.com/in/julianflancheros">LinkedIn </a>
+        <a class="linkButton" href="https://julianflancheros.js.org">Sitio Web </a>
+        <a class="linkButton" href="https://www.instagram.com/julianflancheros">Instagram </a>
+      </div>
+    </div>
+    <div class="attribution">
+      Coded by <a href="https://www.linkedin.com/in/julianflancheros">Julian F. Lancheros</a>
+    </div>
+  </section>
+
+
+  
+</body>
+
+</html>
