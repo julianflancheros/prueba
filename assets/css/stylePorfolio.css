@@ -943,9 +943,9 @@ ul.actions.fit.stacked {
 
 @media only screen and (max-width: 480px) {
 
-  body::before{
+  /* body::before{
     background: #040404;
-  }
+  } */
 
   ul.actions:not(.fixed) {
     -moz-flex-direction: column;
