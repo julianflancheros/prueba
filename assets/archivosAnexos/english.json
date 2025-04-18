@@ -1,6 +1,6 @@
 {
     "busineesCard":{
-        "name": "Julian Lancheros",
+        "name": "Julian F. Lancheros",
         "phase": "Choose only one master, <br> Nature",
         "Job": "Full Stack Developer",
         "mail": "julianfel_@hotmail.com",
@@ -14,11 +14,12 @@
         "saveContact": "Save Contact"
     },
     "personalPage": {
+        "titlePage": "Julian F. Lancheros | Full‑Stack Developer & GIS Specialist",
         "dynamicGreeting": "I'm a passionate <span class=\"typed\" data-typed-items=\"about programming, about design, about nature, about engineering, about web design, to learn new things .....\"></span>",
-        "sectionHome": "<i class=\"icofont-home nav__toggle\"></i>Home", 
+        "sectionHome": "<i class=\"icofont-home nav__toggle\"></i>Home",
         "sectionAbout": "<i class=\"icofont-teacher nav__toggle\"></i>About",
-        "sectionQualification": "<i class=\"icofont-attachment nav__toggle\"></i>Qualification", 
-        "sectionPortfolio": "<i class=\"icofont-id nav__toggle\"></i>Portfolio", 
+        "sectionQualification": "<i class=\"icofont-attachment nav__toggle\"></i>Qualification",
+        "sectionPortfolio": "<i class=\"icofont-id nav__toggle\"></i>Portfolio",
         "sectionContact": "<i class=\"icofont-contact-add nav__toggle\"></i>Contact",
         "aboutTitle": "Learn more about me",
         "aboutProfileTitle":"Agricultural Engineer: Designing systems to help people and transform the industry.",
@@ -68,7 +69,7 @@
         "qualificationPlaceExperience5": "Tegidos C&S",
         "qualificationActivitiesExperience5": "<li>Design of visual elements</li><li>Creation of the virtual brand of the company</li><li>Creation and design of the Facebook page and Intragram of the company</li><li>Design of a sketch for the website</li>",
 
-        
+
         "qualificationDateExperience6":  "October, 2019",
         "qualificationTitleExperience6":"Technology VOLUNTARY IN 10° WORLD CONGRESS FOR CHILDHOOD TALENT",
         "qualificationPlaceExperience6": "ELIC Foundation, Bogotá, CO.",
@@ -86,15 +87,15 @@
         "qualificationParagraphEducation2": "MISSION TIC 2022 is a specific training strategy in youth-oriented programming to expand opportunities in the construction of educational and occupational paths, guaranteeing the use of opportunities within the framework of economic reactivation and orange economy policies.",
         "qualificationTitleEducation3": "Agronomic Engineer",
         "qualificationDateEducation3": "January, 2016 - July, 2019",
-        "qualificationPlaceEducation3": "Universidad Nacional de Colombia, Bogotá, CO", 
+        "qualificationPlaceEducation3": "Universidad Nacional de Colombia, Bogotá, CO",
         "qualificationParagraphEducation3": "The Agronomic Engineer is a professional who studies the physical, chemical and biological, economic and social factors that influence or affect the production process. Its objective is to improve the quality of the processes of production and transformation of agricultural food products. <br> This program has a duration of 5 years.",
 
         "qualificationTitleEducation4": "Financial and Accounting Assistant Technician",
         "qualificationDateEducation4": "September, 2014 - March, 2016",
-        "qualificationPlaceEducation4": "Corporación Iberoamericana de Estudios CIES, Bogotá, CO", 
+        "qualificationPlaceEducation4": "Corporación Iberoamericana de Estudios CIES, Bogotá, CO",
         "qualificationParagraphEducation4": "This Degree focuses on supporting organizations with operational accounting, investment and financing resources, the preparation and presentation of accounting information, as well as the organization of the documentation generated for the financial year, in accordance with current regulations and organizational policies. <br> This program has a duration of 2.5 years.",
-        
-        
+
+
         "contactTitle": "Contact me",
         "contactSocialMedia": "Social Profiles",
         "contactFormSendMessage": "Send Message",

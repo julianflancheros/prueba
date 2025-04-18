@@ -1,6 +1,6 @@
 {
     "busineesCard":{
-        "name": "Julian Lancheros",
+        "name": "Julian F. Lancheros",
         "phase": "Elige solo una maestra,<br> la naturaleza",
         "job": "Desarrollador Full Stack",
         "mail": "julianfel_@hotmail.com",
@@ -14,11 +14,12 @@
         "saveContact": "Guardar contacto"
     },
     "personalPage": {
+        "titlePage": "Julian F. Lancheros | Desarrollador Full‑Stack y GIS",
         "dynamicGreeting": "Soy un apasionado por <span class=\"typed\" data-typed-items=\"la programación, el deseño, la naturaleza, la ingenieria,el diseño web, aprender nuevas cosas .....\"></span>",
-        "sectionHome": "<i class=\"icofont-home nav__toggle\"></i>Inicio", 
+        "sectionHome": "<i class=\"icofont-home nav__toggle\"></i>Inicio",
         "sectionAbout": "<i class=\"icofont-teacher nav__toggle\"></i>Acerca de mi",
-        "sectionQualification": "<i class=\"icofont-attachment nav__toggle\"></i>Perfil", 
-        "sectionPortfolio": "<i class=\"icofont-id nav__toggle\"></i>Portafolio", 
+        "sectionQualification": "<i class=\"icofont-attachment nav__toggle\"></i>Perfil",
+        "sectionPortfolio": "<i class=\"icofont-id nav__toggle\"></i>Portafolio",
         "sectionContact": "<i class=\"icofont-contact-add nav__toggle\"></i>Contacto",
         "aboutTitle": "Conoceme un poco más",
         "aboutProfileTitle":"Ingeniero Agricola: Diseñando soluciones para ayudar a las personas y trasformar la industria.",
@@ -47,7 +48,7 @@
         "Dirección academica Sede Bogotá, Universidad Nacional de Colombia",
         "qualificationActivitiesExperience1": "<li>Diseño del sitio web de la versión 2022-1 con el cartel creado por el diseñador.</li><li>Diseñar el programa de clases siguiendo los lineamientos establecidos</li><li>Soportar clases virtuales en diferentes plataformas</li><li>Gestioné todos los documentos para poder compartir el contenido de las sesiones con internet y la estación de radio de la universidad.</li><li>Desarrollé todo el backend para las calificaciones de los estudiantes y creé resúmenes recurrentes para cada monitor.</li>",
 
-        
+
         "qualificationDateExperience2": "Febrero, 2021 - Marzo, 2022",
         "qualificationTitleExperience2":"Monitor de Tecnologias en Taller de Proyectos Interdiciplinarios (TPi)",
         "qualificationPlaceExperience2":"Facultdad de Ingeniria, Universidad Nacional de Colombia",
@@ -62,7 +63,7 @@
         "qualificationTitleExperience4":"Instructor Junior",
         "qualificationPlaceExperience4": "Unidad de Informática Facultad de Ciencias Economicas (UIFCE), Universidad Nacional de Colombia",
         "qualificationActivitiesExperience4": "<li>Apoyé una actividad de enseñanza como instructor con 44 personas</li><li>Aprender y usar algunos softwares enfocados en FCE </li><li>Integre un equipo de más de 30 personas.</li><li>Diseñar un sistema para motivar el estudio autónomo de todo el equipo</li>",
-        
+
 
         "qualificationDateExperience5":  "Mayo, 2020 - Octubre, 2020",
         "qualificationTitleExperience5":"Desarrollador de Marca",
@@ -87,12 +88,12 @@
         "qualificationParagraphEducation2": "MISIÓN TIC 2022 es una estrategia de formación específica en programación orientada a jóvenes para ampliar oportunidades en la construcción de trayectorias educativas y ocupacionales, garantizando el aprovechamiento de oportunidades en el marco de las políticas de reactivación económica y economía naranja.",
         "qualificationTitleEducation3": "Ingenieria Agronomica",
         "qualificationDateEducation3": "Enero, 2016 - Julio, 2019",
-        "qualificationPlaceEducation3": "Universidad Nacional de Colombia, Bogotá, CO", 
+        "qualificationPlaceEducation3": "Universidad Nacional de Colombia, Bogotá, CO",
         "qualificationParagraphEducation3": "El Ingeniero Agrónomo es un profesional que estudia los factores físicos, químicos y biológicos, económicos y sociales que influyen o afectan el proceso productivo. Su objetivo es mejorar la calidad de los procesos de producción y transformación de productos agroalimentarios. <br> Este programa tiene una duración de 5 años.",
 
         "qualificationTitleEducation4": "Técnico Auxiliar en Contabilidad y Finanzas",
         "qualificationDateEducation4": "Septiembre, 2014 - Marzo, 2016",
-        "qualificationPlaceEducation4": "Corporación Iberoamericana de Estudios CIES, Bogotá, CO", 
+        "qualificationPlaceEducation4": "Corporación Iberoamericana de Estudios CIES, Bogotá, CO",
         "qualificationParagraphEducation4": "Este grado se centra en apoyar a las organizaciones con los recursos operativos contables, de inversión y financiación, la elaboración y presentación de la información contable, así como la organización de la documentación generada para el ejercicio, de acuerdo con la normativa vigente y las políticas organizativas. <br> Este programa tiene una duración de 2,5 años.",
 
 
