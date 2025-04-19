@@ -15,6 +15,7 @@
     },
     "personalPage": {
         "titlePage": "Julian F. Lancheros | Full‑Stack Developer & GIS Specialist",
+        "meta-description": "Explore Julian F. Lancheros' portfolio in web development, GIS and data analysis from Bogotá, Colombia.",
         "dynamicGreeting": "I'm a passionate <span class=\"typed\" data-typed-items=\"about programming, about design, about nature, about engineering, about web design, to learn new things .....\"></span>",
         "sectionHome": "<i class=\"icofont-home nav__toggle\"></i>Home",
         "sectionAbout": "<i class=\"icofont-teacher nav__toggle\"></i>About",
