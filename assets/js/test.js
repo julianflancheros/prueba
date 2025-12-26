@@ -79,26 +79,20 @@ const portfolioDetails = {
             "ArcGIS",
             "QGIS",
             "GlobalMapper",
-            "",
+            "Epanet",
             "Visual Basic"
         ],
         media: {
-            type: "url",
+            type: "iframe",
             items: [
                 {
-                    src: `<div class="row mapUpper" >
-            <iframe id="qv" src="./Mapas%203D/Modelo%20de%20Elevaciòn%20del%20terreno/Modelo3DNilo.html" frameborder="0"></iframe>
-          </div>`,
+                    src: "./Mapas%203D/Modelo%20de%20Elevaciòn%20del%20terreno/Modelo3DNilo.html",
                 },
                 {
-                    src: `<div class="row mapUpper">
-              <iframe id="qv" src="./Mapas%203D/Mapa%20Compuesto/Modelo3DNilo.html" frameborder="0"></iframe>
-          </div>`,
+                    src: "./Mapas%203D/Mapa%20Compuesto/Modelo3DNilo.html",
                 },
                 {
-                    src: `<div class="row">
-            <iframe id="qv" src="./Mapas%203D/Mapa%20final%20proyecto/modelo.html" frameborder="0"></iframe>
-        </div>`,
+                    src: "./Mapas%203D/Mapa%20final%20proyecto/modelo.html",
                 },
             ]
         },

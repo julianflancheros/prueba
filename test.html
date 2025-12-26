@@ -30,14 +30,32 @@
     <title>Portfolio Details</title>
     <script src="assets/js/test.js"></script>
 
+    <!-- ESTILOS AGREGADOS PARA IFRAMES RESPONSIVOS -->
+    <style>
+        .mapUpper {
+            padding-bottom: 50px;
+        }
+
+        /* Clase dinámica para cualquier iframe inyectado */
+        .map-frame {
+            width: 100%;        /* Ocupa todo el ancho disponible del contenedor padre */
+            display: block;
+            border: none;
+            aspect-ratio: 16/9; /* Mantiene proporción panorámica */
+            min-height: 400px;  /* Altura mínima para asegurar visibilidad en móviles */
+        }
+    </style>
+
     <script>
         function loadMedia(media) {
             const urlParams = new URLSearchParams(window.location.search);
             const projectKey = urlParams.get('project');
-            const project = portfolioDetails[projectKey];
+            // Asegurarse de que portfolioDetails esté definido (asumiendo que viene de test.js)
+            const project = (typeof portfolioDetails !== 'undefined') ? portfolioDetails[projectKey] : null;
 
             let mediaContent = '';
             console.log(media.type)
+            
             if (media.type === 'image') {
                 mediaContent = `<div class="gallery">
                 ${media.items.map(item => `
@@ -55,24 +73,41 @@
                                 </video>
                             `;
             } else if (media.type === 'url') {
-                mediaContent = `
-
-                ${media.items.map(item => `${item.src}`).join('')}
-                `;
+                mediaContent = `${media.items.map(item => `${item.src}`).join('')}`;
+            } 
+            // === NUEVA OPCIÓN PARA IFRAMES ===
+            else if (media.type === 'iframe') {
+                // Asumimos que media.items es un array de objetos con { src: "url" }
+                mediaContent = media.items.map(item => `
+                    <div class="row mapUpper">
+                        <iframe class="map-frame" src="${item.src}" allowfullscreen></iframe>
+                    </div>
+                `).join('');
             }
+            
             console.log(mediaContent);
             return mediaContent;
         }
+
         document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
             const projectKey = urlParams.get('project');
+            
+            // Verificación de seguridad por si portfolioDetails no cargó
+            if (typeof portfolioDetails === 'undefined') {
+                console.error("portfolioDetails no está definido. Revisa assets/js/test.js");
+                return;
+            }
+
             const project = portfolioDetails[projectKey];
             if (project) {
                 document.title = "Portfolio Details - " + project.description;
-                document.getElementById("section-title").innerText = portfolioDetails.title;
-                document.getElementById("section-description").innerText = project.description;
-                document.getElementById("breadcrumbs").innerHTML = project.description;
-                document.getElementById("portfolio-details-container").innerHTML = loadMedia(project.media);
+                if(document.getElementById("section-title")) document.getElementById("section-title").innerText = portfolioDetails.title || "Portfolio Details";
+                if(document.getElementById("section-description")) document.getElementById("section-description").innerText = project.description;
+                if(document.getElementById("breadcrumbs")) document.getElementById("breadcrumbs").innerHTML = project.description;
+                
+                // Cargar Medios
+                if(document.getElementById("portfolio-details-container")) document.getElementById("portfolio-details-container").innerHTML = loadMedia(project.media);
 
                 const infoBox = `
                 <div class="info-box">
@@ -85,30 +120,35 @@
                 </div>
             `;
 
-                document.getElementById("summary").innerHTML = infoBox;
-                document.getElementById('description-content').innerHTML = project.projectDescription;
+                if(document.getElementById("summary")) document.getElementById("summary").innerHTML = infoBox;
+                if(document.getElementById('description-content')) document.getElementById('description-content').innerHTML = project.projectDescription;
+                
                 const skillsContent = document.getElementById('skills-content');
-                skillsContent.innerHTML = '';
-                let row;
-                project.skills.forEach((skill, index) => {
-                    if (index % 4 === 0) {
-                        row = document.createElement('div');
-                        row.className = 'row';
-                        skillsContent.appendChild(row);
-                    }
-                    const skillElement = document.createElement('div');
-                    skillElement.className = 'col-lg-3 col-md-4 mt-4';
-                    skillElement.innerHTML = `
-                    <div class="interests">
-                        <div class="icon-box">
-                            <i class="icofont-architecture-alt" style="color: #18d26e;"></i>
-                            <h3>${skill}</h3>
-                        </div>
-                    </div>`;
-                    row.appendChild(skillElement);
-                });
+                if (skillsContent) {
+                    skillsContent.innerHTML = '';
+                    let row;
+                    project.skills.forEach((skill, index) => {
+                        if (index % 6 === 0) {
+                            row = document.createElement('div');
+                            row.className = 'row';
+                            skillsContent.appendChild(row);
+                        }
+                        const skillElement = document.createElement('div');
+                        skillElement.className = 'col-lg-3 col-md-4 mt-4';
+                        skillElement.innerHTML = `
+                        <div class="interests">
+                            <div class="icon-box">
+                                <i class="icofont-architecture-alt" style="color: #18d26e;"></i>
+                                <h3>${skill}</h3>
+                            </div>
+                        </div>`;
+                        row.appendChild(skillElement);
+                    });
+                }
             }
-            else (window.location.href = "404.html");
+            else {
+                window.location.href = "404.html";
+            }
         });
     </script>
 </head>
@@ -155,18 +195,7 @@
                 </div>
 
                 <div id="portfolio-details-container"></div>
-                <!--
-                <div class="portfolio-details-container">
-
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/portfolio/portfolio-7-details-1.jpg" class="img-fluid" alt="">
-                        <img src="assets/img/portfolio/portfolio-7-details-2.jpg" class="img-fluid" alt="">
-                        <img src="assets/img/portfolio/portfolio-7-details-3.jpg" class="img-fluid" alt="">
-                        <img src="assets/img/portfolio/portfolio-7-details-4.jpg" class="img-fluid" alt="">
-                        <img src="assets/img/portfolio/portfolio-7-details-5.jpg" class="img-fluid" alt="">
-                    </div>
-
-                </div> -->
+                <!-- El contenedor ya tiene la clase CSS necesaria inyectada por JS si es un iframe -->
 
                 <div id="summary"></div>
                 <br /><br />
@@ -181,7 +210,7 @@
         <div class="container">
 
             <small><span>Developed and designed by&nbsp;</span><a
-                    href='mailto:julianfel_@hotmail.com'>Julianflancheros</a>. &copy;
+                    href='mailto:julianflancheros@gmail.com'>Julianflancheros</a>. &copy;
                 <script type="text/javascript">
                     var d = new Date()
                     document.write(d.getFullYear())
@@ -198,13 +227,6 @@
     <a href="#" class="change-theme">
         <i class="icofont-sun-alt" id="theme-button"></i>
     </a>
-
-    <!-- <a href="#" class="change-language"> -->
-    <!-- <img src="assets/img/es.svg" alt="" id="language-button"> -->
-    <!-- <img alt="bandera idioma" id="language-button" src="https://julianflancheros.js.org/assets/img/gb.svg"> -->
-    <!-- </a> -->
-
-    <!-- <div id="preloader"></div> -->
 
 </body>
 <!-- Vendor JS Files -->
