@@ -16,7 +16,7 @@
     "personalPage": {
         "titlePage": "Julian F. Lancheros | Desarrollador Full‑Stack y GIS",
         "meta-description": "Portafolio de Julian F. Lancheros: desarrollo web, SIG y análisis de datos en Bogotá, Colombia.",
-        "dynamicGreeting": "Soy un apasionado por <span class=\"typed\" data-typed-items=\"la programación, el deseño, la naturaleza, la ingenieria,el diseño web, aprender nuevas cosas .....\"></span>",
+        "dynamicGreeting": "<h2 class=\"textIntro\" data-section=\"personalPage\"> Soy un apasionado por <span class=\"typed\" data-typed-items=\"la programación, el deseño, la naturaleza, la ingenieria,el diseño web, aprender nuevas cosas .....\"></span>",
         "sectionHome": "<i class=\"icofont-home nav__toggle\"></i>Inicio",
         "sectionAbout": "<i class=\"icofont-teacher nav__toggle\"></i>Acerca de mi",
         "sectionQualification": "<i class=\"icofont-attachment nav__toggle\"></i>Perfil",
