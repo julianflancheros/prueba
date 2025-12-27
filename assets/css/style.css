@@ -1829,7 +1829,7 @@ section .container {
 /* For large devices*/
 @media  screen and (min-width: 1024px){
   .back-to-top {
-    bottom: 90px;
+    bottom: 15px;
   }
 }
 
