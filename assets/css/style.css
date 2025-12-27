@@ -1822,14 +1822,14 @@ section .container {
 
 @media (min-width: 569px) and (max-width: 1023px){
   .back-to-top {
-    bottom: 15px;
+    bottom: 90px;
   }
 }
 
 /* For large devices*/
 @media  screen and (min-width: 1024px){
   .back-to-top {
-    bottom: 15px;
+    bottom: 90px;
   }
 }
 
