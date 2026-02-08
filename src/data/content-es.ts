@@ -183,7 +183,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Web amaderarte',
         date: 'Enero 2026',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-19.jpg',
+        image: '/portfolio/portfolio-19.jpg',
         url: 'https://amaderarte.vercel.app',
         owner: 'Proyecto Personal',
         ownerRole: 'Product Owner · Web Developer · UX',
@@ -196,7 +196,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Web Page Teatro Tierra',
         date: 'Junio 2024',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-18.jpg',
+        image: '/portfolio/portfolio-18.jpg',
         url: 'https://teatrotierra.org/',
         owner: 'Claudia Sánchez',
         ownerRole: 'Productora ejecutiva'
@@ -206,7 +206,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Mapas Dinámicos con QGIS y Three.js',
         date: 'Marzo 2023',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-17.jpg',
+        image: '/portfolio/portfolio-17.jpg',
         owner: 'Ingeniería de Riegos',
         ownerRole: 'Materia ofrecida por la Universidad'
       },
@@ -215,7 +215,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Sitio web Rama est. IEEE',
         date: 'Enero 2023',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-16.jpg',
+        image: '/portfolio/portfolio-16.jpg',
         url: 'https://ieeeunal.github.io/Pagina_Web/',
         owner: 'IEEE UNAL',
         ownerRole: 'Grupo estudiantil universitario'
@@ -225,7 +225,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Sitio web Cátedra JEG',
         date: 'Julio 2022',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-15.jpg',
+        image: '/portfolio/portfolio-15.jpg',
         url: 'http://www.catedras-bogota.unal.edu.co/catedra-jorge-eliecer-gaitan/2022-1',
         owner: 'Universidad Nacional',
         ownerRole: 'Materia ofrecida por la Universidad'
@@ -235,7 +235,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Sitio web Innovate',
         date: 'Diciembre 2021',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-14.jpg',
+        image: '/portfolio/portfolio-14.jpg',
         url: 'https://ingenieria.unal.edu.co/innovate',
         owner: 'Universidad Nacional',
         ownerRole: 'Grupo de investigación'
@@ -245,7 +245,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Deleite Restaurante',
         date: 'Diciembre 2021',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-13.jpg',
+        image: '/portfolio/portfolio-13.jpg',
         url: 'https://restaurante-deleite.herokuapp.com/',
         owner: 'Misión TIC & UTP',
         ownerRole: 'Proyecto final'
@@ -255,7 +255,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Sitio web TPi',
         date: 'Agosto 2021',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-7.jpg',
+        image: '/portfolio/portfolio-7.jpg',
         owner: 'Universidad Nacional',
         ownerRole: 'Materia ofrecida por la Universidad'
       },
@@ -264,7 +264,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Tejidos C&S',
         date: 'Octubre 2020',
         category: 'design',
-        image: '/portfolio/portfolio/portfolio-3.jpg',
+        image: '/portfolio/portfolio-3.jpg',
         owner: 'Juan Silva',
         ownerRole: 'Hijo del propietario del negocio'
       },
@@ -273,7 +273,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Juego Pacman',
         date: 'Noviembre 2019',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-5.jpg',
+        image: '/portfolio/portfolio-5.jpg',
         owner: 'Santiago Carvajal',
         ownerRole: 'Profesor'
       },
@@ -282,7 +282,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Página ITAWA Band',
         date: 'Noviembre 2017',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-1.jpg',
+        image: '/portfolio/portfolio-1.jpg',
         url: 'https://www.instagram.com/itawa.co/',
         owner: 'Juan Ramírez',
         ownerRole: 'Guitarrista'
@@ -292,7 +292,7 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         title: 'Cultivo de Cilantro',
         date: 'Junio 2016',
         category: 'crops',
-        image: '/portfolio/portfolio/portfolio-2.jpg',
+        image: '/portfolio/portfolio-2.jpg',
         owner: 'Jairo Cuervo',
         ownerRole: 'Profesor'
       }

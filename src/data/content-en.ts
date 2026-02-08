@@ -206,7 +206,7 @@ export const content = {
         title: 'Web amaderarte',
         date: 'January 2026',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-19.jpg',
+        image: '/portfolio/portfolio-19.jpg',
         url: 'https://amaderarte.vercel.app',
         owner: 'Personal Project',
         ownerRole: 'Product Owner · Web Developer · UX', 
@@ -219,7 +219,7 @@ export const content = {
         title: 'Web Page Teatro Tierra',
         date: 'June 2024',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-18.jpg',
+        image: '/portfolio/portfolio-18.jpg',
         url: 'https://teatrotierra.org/',
         owner: 'Claudia Sánchez',
         ownerRole: 'Executive producer'
@@ -229,7 +229,7 @@ export const content = {
         title: 'Dynamic Maps with QGIS and Three.js',
         date: 'March 2023',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-17.jpg',
+        image: '/portfolio/portfolio-17.jpg',
         owner: 'Irrigation Engineering',
         ownerRole: 'Subject offered by University'
       },
@@ -238,7 +238,7 @@ export const content = {
         title: 'IEEE Branch Website',
         date: 'January 2023',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-16.jpg',
+        image: '/portfolio/portfolio-16.jpg',
         url: 'https://ieeeunal.github.io/Pagina_Web/',
         owner: 'IEEE UNAL',
         ownerRole: 'University Student Group'
@@ -248,7 +248,7 @@ export const content = {
         title: 'Cátedra JEG Website',
         date: 'July 2022',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-15.jpg',
+        image: '/portfolio/portfolio-15.jpg',
         url: 'http://www.catedras-bogota.unal.edu.co/catedra-jorge-eliecer-gaitan/2022-1',
         owner: 'Universidad Nacional',
         ownerRole: 'Subject offered by University'
@@ -258,7 +258,7 @@ export const content = {
         title: 'Innovate Website',
         date: 'December 2021',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-14.jpg',
+        image: '/portfolio/portfolio-14.jpg',
         url: 'https://ingenieria.unal.edu.co/innovate',
         owner: 'Universidad Nacional',
         ownerRole: 'Research Group'
@@ -268,7 +268,7 @@ export const content = {
         title: 'Deleite Restaurant',
         date: 'December 2021',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-13.jpg',
+        image: '/portfolio/portfolio-13.jpg',
         url: 'https://restaurante-deleite.herokuapp.com/',
         owner: 'Misión TIC & UTP',
         ownerRole: 'Final Project'
@@ -278,7 +278,7 @@ export const content = {
         title: 'TPi Website',
         date: 'August 2021',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-7.jpg',
+        image: '/portfolio/portfolio-7.jpg',
         owner: 'Universidad Nacional',
         ownerRole: 'Subject offered by University'
       },
@@ -287,7 +287,7 @@ export const content = {
         title: 'Tejidos C&S',
         date: 'October 2020',
         category: 'design',
-        image: '/portfolio/portfolio/portfolio-3.jpg',
+        image: '/portfolio/portfolio-3.jpg',
         owner: 'Juan Silva',
         ownerRole: 'Son of Business Owner'
       },
@@ -296,7 +296,7 @@ export const content = {
         title: 'Pacman Game',
         date: 'November 2019',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-5.jpg',
+        image: '/portfolio/portfolio-5.jpg',
         owner: 'Santiago Carvajal',
         ownerRole: 'Teacher'
       },
@@ -305,7 +305,7 @@ export const content = {
         title: 'ITAWA Band Page',
         date: 'November 2017',
         category: 'programming',
-        image: '/portfolio/portfolio/portfolio-1.jpg',
+        image: '/portfolio/portfolio-1.jpg',
         url: 'https://www.instagram.com/itawa.co/',
         owner: 'Juan Ramírez',
         ownerRole: 'Guitarist'
@@ -315,7 +315,7 @@ export const content = {
         title: 'Coriander Crop',
         date: 'June 2016',
         category: 'crops',
-        image: '/portfolio/portfolio/portfolio-2.jpg',
+        image: '/portfolio/portfolio-2.jpg',
         owner: 'Jairo Cuervo',
         ownerRole: 'Teacher'
       }
