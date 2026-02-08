@@ -93,6 +93,7 @@ export default function ProjectPage({ params }: PageProps) {
       heroAlt={project.title}
       sections={sections}
       url={project.url}
+      maps={project.maps}
       locale={locale}
     />
   );

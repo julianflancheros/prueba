@@ -19,6 +19,12 @@ type MetricItem = {
   sub: string;
 };
 
+type MapItem = {
+  title: string;
+  src: string;
+  description?: string;
+};
+
 type ProjectLayoutProps = {
   title: string;
   subtitle?: string;
@@ -33,6 +39,8 @@ type ProjectLayoutProps = {
   metrics?: MetricItem[];
   /** Optional testimonial quote */
   testimonial?: { quote: string; author: string };
+  /** Optional embedded maps */
+  maps?: MapItem[];
 };
 
 /* ───────────── Animated counter ───────────── */
@@ -182,6 +190,7 @@ export default function ProjectLayout({
   locale,
   metrics,
   testimonial,
+  maps,
 }: ProjectLayoutProps) {
   const buttonVariants = {
     rest: { scale: 1 },
@@ -200,6 +209,11 @@ export default function ProjectLayout({
   const displayMetrics: MetricItem[] = metrics ?? (copy.metrics as MetricItem[]);
   const displayTestimonial = testimonial ?? copy.testimonial;
   const basePath = `/${locale}`;
+  const mapLabel = locale === 'es' ? 'Mapas interactivos' : 'Interactive maps';
+  const mapHint =
+    locale === 'es'
+      ? 'Modelos 3D generados con QGIS y Three.js.'
+      : '3D models generated with QGIS and Three.js.';
 
   return (
     <section
@@ -392,6 +406,74 @@ export default function ProjectLayout({
             <BentoCard key={section.title} item={section as JourneySection & { size?: string }} index={i} total={sections.length} />
           ))}
         </div>
+
+        {maps && maps.length > 0 && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-4 mb-8"
+            >
+              <span
+                className="font-mono text-[11px] uppercase tracking-[0.25em] whitespace-nowrap"
+                style={{ color: 'var(--color-text-secondary)', opacity: 0.5 }}
+              >
+                {mapLabel}
+              </span>
+              <div
+                className="flex-1 h-px"
+                style={{ backgroundColor: 'var(--color-container-light)' }}
+              />
+            </motion.div>
+
+            <div
+              className="mb-4 text-sm"
+              style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}
+            >
+              {mapHint}
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+              {maps.map((item) => (
+                <div
+                  key={item.src}
+                  className="rounded-2xl border p-4"
+                  style={{
+                    backgroundColor: 'var(--color-container)',
+                    borderColor: 'var(--color-container-light)',
+                  }}
+                >
+                  <div className="mb-3">
+                    <div
+                      className="text-sm font-semibold"
+                      style={{ color: 'var(--color-text)' }}
+                    >
+                      {item.title}
+                    </div>
+                    {item.description && (
+                      <div
+                        className="text-xs"
+                        style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}
+                      >
+                        {item.description}
+                      </div>
+                    )}
+                  </div>
+                  <div className="relative aspect-video w-full overflow-hidden rounded-xl border">
+                    <iframe
+                      src={item.src}
+                      title={item.title}
+                      className="absolute inset-0 h-full w-full"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
         {/* ══════════════════════════════════════════════
             SOCIAL PROOF — testimonial
