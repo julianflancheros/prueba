@@ -231,7 +231,23 @@ export const content = {
         category: 'programming',
         image: '/portfolio/portfolio-17.jpg',
         owner: 'Irrigation Engineering',
-        ownerRole: 'Subject offered by University'
+        ownerRole: 'Subject offered by University',
+        description:
+          '3D visualization of terrain models and composite maps generated in QGIS, rendered with Three.js to explore layers and relief in the browser.',
+        techStack: ['QGIS', 'Three.js', 'WebGL', 'JavaScript'],
+        metric: '2 interactive 3D maps',
+        maps: [
+          {
+            title: 'Composite map',
+            description: 'Combined layers with texture and relief.',
+            src: '/Mapas%203D/Mapa%20Compuesto/Modelo3DNilo.html',
+          },
+          {
+            title: 'Terrain elevation model',
+            description: 'Topographic relief for slope analysis.',
+            src: '/Mapas%203D/Modelo%20de%20Elevaci%C3%B2n%20del%20terreno/Modelo3DNilo.html',
+          },
+        ],
       },
       {
         id: 'ieee-website',

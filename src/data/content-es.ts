@@ -208,7 +208,23 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         category: 'programming',
         image: '/portfolio/portfolio-17.jpg',
         owner: 'Ingeniería de Riegos',
-        ownerRole: 'Materia ofrecida por la Universidad'
+        ownerRole: 'Materia ofrecida por la Universidad',
+        description:
+          'Visualización 3D de modelos de terreno y mapas compuestos generados en QGIS, renderizados en Three.js para explorar capas y relieve en el navegador.',
+        techStack: ['QGIS', 'Three.js', 'WebGL', 'JavaScript'],
+        metric: '2 mapas 3D interactivos',
+        maps: [
+          {
+            title: 'Mapa compuesto',
+            description: 'Capas combinadas con textura y relieve.',
+            src: '/Mapas%203D/Mapa%20Compuesto/Modelo3DNilo.html',
+          },
+          {
+            title: 'Modelo de elevación del terreno',
+            description: 'Relieve topográfico para análisis de pendientes.',
+            src: '/Mapas%203D/Modelo%20de%20Elevaci%C3%B2n%20del%20terreno/Modelo3DNilo.html',
+          },
+        ],
       },
       {
         id: 'ieee-website',
