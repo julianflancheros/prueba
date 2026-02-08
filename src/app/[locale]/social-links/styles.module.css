@@ -1,0 +1,73 @@
+.page {
+  min-height: calc(100dvh - 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.card {
+  background: var(--color-container);
+  border-radius: 20px;
+  padding: 32px 28px;
+  width: min(360px, 92vw);
+  text-align: center;
+  border: 1px solid var(--color-container-light);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.avatar {
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(25, 210, 111, 0.6);
+  margin: 0 auto 18px;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.location {
+  color: var(--color-green);
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.phrase {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+}
+
+.links {
+  display: grid;
+  gap: 10px;
+}
+
+.linkButton {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+  font-weight: 600;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.linkButton:hover {
+  background: var(--color-green);
+  color: #0a0a0a;
+  transform: translateY(-1px);
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.footer a {
+  color: var(--color-green);
+}

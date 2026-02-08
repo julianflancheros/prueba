@@ -1,0 +1,205 @@
+.page {
+  min-height: calc(100dvh - 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.card {
+  width: min(440px, 92vw);
+  height: 560px;
+  perspective: 1600px;
+  position: relative;
+}
+
+.flipToggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.85s ease;
+  transform-style: preserve-3d;
+}
+
+.cardFace {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--color-container-light);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(25, 210, 111, 0.08));
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.cardFront {
+  text-align: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background: var(--color-container);
+}
+
+.headline {
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  text-wrap: balance;
+}
+
+.subheading {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  border-radius: 999px;
+  border: 2px solid rgba(25, 210, 111, 0.5);
+  object-fit: cover;
+}
+
+.bio {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contactList {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-container-light);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(25, 210, 111, 0.6);
+}
+
+.contactIcon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(25, 210, 111, 0.12);
+  color: var(--color-green);
+  font-size: 1.2rem;
+}
+
+.contactLabel {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.contactValue {
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: var(--color-green);
+  color: #0a0a0a;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(25, 210, 111, 0.25);
+}
+
+.secondaryButton {
+  background: transparent;
+  border: 1px solid var(--color-container-light);
+  color: var(--color-text);
+}
+
+.flipHint {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.flipButton {
+  margin: 18px auto 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--color-container-light);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.flipButton:hover {
+  border-color: rgba(25, 210, 111, 0.5);
+  transform: translateY(-1px);
+}
+
+.flipToggle:checked ~ .cardInner {
+  transform: rotateY(180deg);
+}
+
+@media (hover: hover) {
+  .card:hover .cardInner {
+    transform: rotateY(180deg);
+  }
+}
+
+@media (max-width: 520px) {
+  .card {
+    height: 600px;
+  }
+}
