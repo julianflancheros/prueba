@@ -7,36 +7,33 @@ type PageProps = {
   params: { locale: 'es' | 'en'; id: string };
 };
 
-const journeyByIdEs: Record<string, { title: string; body: string }[]> = {
-  amaderarte: [
+const journeyByIdEn: Record<string, { title: string; body: string }[]> = {
+  SaludVault: [
     {
-      title: 'Llamado',
-      body: 'Los artesanos necesitaban un canal digital que transformara piezas únicas en ventas reales sin perder la esencia del oficio.',
+      title: 'Call',
+      body: 'To be defined.',
     },
     {
-      title: 'Conflicto',
-      body: 'La visibilidad era limitada y el catálogo físico generaba fricción para compradores fuera del alcance local.',
+      title: 'Conflict',
+      body: 'To be defined.',
     },
     {
-      title: 'Transformación',
-      body: 'Se construyó una plataforma centrada en descubrimiento visual, navegación rápida y un flujo de compra simple.',
+      title: 'Transformation',
+      body: 'To be defined.',
     },
     {
-      title: 'Resultado',
-      body: 'La experiencia redujo la fricción y aumentó el alcance, logrando más de 500 visitantes en el primer mes.',
+      title: 'Result',
+      body: 'To be defined.',
     },
     {
-      title: 'Regreso',
-      body: 'El taller quedó con una vitrina escalable que permite crecer la oferta y medir el impacto comercial.',
+      title: 'Return',
+      body: 'To be defined.',
     },
   ],
-};
-
-const journeyByIdEn: Record<string, { title: string; body: string }[]> = {
   amaderarte: [
     {
       title: 'Call',
-      body: 'Artisans needed a digital channel that could turn unique pieces into real sales without losing the craft’s essence.',
+      body: "Artisans needed a digital channel that could turn unique pieces into real sales without losing the craft's essence.",
     },
     {
       title: 'Conflict',
@@ -60,15 +57,21 @@ const journeyByIdEn: Record<string, { title: string; body: string }[]> = {
 export default function ProjectPage({ params }: PageProps) {
   const locale = params.locale === 'en' ? 'en' : 'es';
   const content = locale === 'es' ? contentEs : contentEn;
-  const project = content.portfolio.projects.find((item) => item.id === params.id);
+  
+  // Buscar el proyecto directamente en el array
+  const project = content.portfolio.projects.find((p) => p.id === params.id);
 
   if (!project) {
     notFound();
   }
 
-  const journeyById = locale === 'es' ? journeyByIdEs : journeyByIdEn;
+  // Obtener el journey del proyecto
+  const journeyById = locale === 'es' 
+    ? project.projectJourneys 
+    : journeyByIdEn[params.id];
+
   const sections =
-    journeyById[project.id] ?? [
+    journeyById ?? [
       {
         title: locale === 'es' ? 'Conflicto' : 'Conflict',
         body: locale === 'es' ? 'Desafío operativo por definir.' : 'Operational challenge to be defined.',

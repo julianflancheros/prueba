@@ -2,227 +2,164 @@
 
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiExternalLink, FiArrowUpRight } from 'react-icons/fi';
+import { FiArrowUpRight, FiExternalLink } from 'react-icons/fi';
 import { content as contentEs } from '@/data/content-es';
 import { content as contentEn } from '@/data/content-en';
 
-export default function PortfolioCleanGrid() {
+export default function PortfolioBentoGrid() {
   const pathname = usePathname();
   const locale = pathname.startsWith('/en') ? 'en' : 'es';
-  const [activeFilter, setActiveFilter] = useState('all');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const content = locale === 'es' ? contentEs : contentEn;
-
-  const getCategoryKey = (project: (typeof content.portfolio.projects)[number]) => {
-    if (project.id === 'dynamic-maps') return 'gis';
-    if (project.category === 'crops') return 'agtech';
-    if (project.category === 'design') return 'enterprise';
-    if (project.category === 'programming') return 'full-stack';
-    return 'full-stack';
-  };
-
-  const filteredProjects = activeFilter === 'all'
-    ? content.portfolio.projects
-    : content.portfolio.projects.filter((p) => getCategoryKey(p) === activeFilter);
-
-  const filters = [
-    { key: 'all', label: content.portfolio.filters.all },
-    { key: 'gis', label: 'GIS & DATA' },
-    { key: 'enterprise', label: 'ENTERPRISE' },
-    { key: 'agtech', label: 'AGTECH' },
-    { key: 'full-stack', label: 'FULL-STACK' },
-  ];
-
-  const categoryColors: Record<string, string> = {
-    gis: '#10b981',
-    enterprise: '#f97316',
-    agtech: '#22c55e',
-    'full-stack': '#3b82f6',
-    all: '#19d26f'
-  };
+  const featuredProjects = content.portfolio.projects.filter(p => p.featured === true);
 
   return (
-    <section id="portfolio" className="section-container relative overflow-hidden">
+    <section id="portfolio" className="relative py-24 px-4 overflow-hidden">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#18F07D]/5 to-transparent pointer-events-none" />
+      
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">{content.portfolio.title}</h2>
-          <p className="section-subtitle max-w-2xl mx-auto">{content.portfolio.subtitle}</p>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            {content.portfolio.title}
+          </h2>
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            {content.portfolio.subtitle}
+          </p>
         </motion.div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {filters.map((filter) => (
-            <motion.button
-              key={filter.key}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveFilter(filter.key)}
-              className="relative px-8 py-3 rounded-full font-bold text-sm overflow-hidden transition-all duration-300"
-              style={{
-                backgroundColor: activeFilter === filter.key
-                  ? `${categoryColors[filter.key]}dd`
-                  : 'var(--color-green-alpha)',
-                color: activeFilter === filter.key
-                  ? 'var(--color-body)'
-                  : 'var(--color-text)',
-                border: `2px solid ${activeFilter === filter.key ? 'transparent' : 'var(--color-green)'}`,
-              }}
-              onMouseEnter={(e) => {
-                if (activeFilter !== filter.key) {
-                  e.currentTarget.style.backgroundColor = 'var(--color-green)';
-                  e.currentTarget.style.color = 'var(--color-body)';
-                  e.currentTarget.style.borderColor = 'transparent';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (activeFilter !== filter.key) {
-                  e.currentTarget.style.backgroundColor = 'var(--color-green-alpha)';
-                  e.currentTarget.style.color = 'var(--color-text)';
-                  e.currentTarget.style.borderColor = 'var(--color-green)';
-                }
-              }}
-            >
-              {filter.label}
-            </motion.button>
-          ))}
-        </div>
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[300px] mb-12">
+          {featuredProjects.map((project, index) => {
+            const isHovered = hoveredId === project.id;
+            
+            return (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                onMouseEnter={() => setHoveredId(project.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                className={`${project.span} ${project.rows} group relative rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/50 backdrop-blur-sm`}
+              >
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out"
+                    style={{
+                      transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+                    }}
+                  />
+                  {/* Dark gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                  
+                  {/* Neon glow effect on hover */}
+                  <div 
+                    className="absolute inset-0 transition-opacity duration-500"
+                    style={{
+                      background: 'radial-gradient(circle at 50% 100%, rgba(24, 240, 125, 0.15) 0%, transparent 70%)',
+                      opacity: isHovered ? 1 : 0,
+                    }}
+                  />
+                </div>
 
-        {/* Clean Grid - 3 columns */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
-            {filteredProjects.map((project, index) => {
-              const categoryKey = getCategoryKey(project);
-              const categoryColor = categoryColors[categoryKey];
-              const isHovered = hoveredId === project.id;
-
-              return (
-                <motion.div
-                  key={project.id}
-                  layout
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  onMouseEnter={() => setHoveredId(project.id)}
-                  onMouseLeave={() => setHoveredId(null)}
-                  className="group cursor-pointer"
-                >
-                  <div className="rounded-2xl overflow-hidden transition-all duration-300"
-                       style={{ 
-                         backgroundColor: 'var(--color-container)',
-                         transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
-                         boxShadow: isHovered 
-                           ? `0 20px 40px ${categoryColor}40`
-                           : '0 4px 6px rgba(0,0,0,0.1)'
-                       }}>
-                    
-                    {/* Image Container - Fixed 4:3 */}
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover transition-transform duration-700"
-                        style={{
-                          transform: isHovered ? 'scale(1.1)' : 'scale(1)'
-                        }}
-                      />
-
-                      {/* Gradient Overlay on Hover */}
-                      <div 
-                        className="absolute inset-0 transition-opacity duration-500"
-                        style={{
-                          background: `linear-gradient(to top, ${categoryColor}dd 0%, transparent 60%)`,
-                          opacity: isHovered ? 1 : 0
-                        }}
-                      />
-
-                      {/* Hover Actions */}
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ 
-                          opacity: isHovered ? 1 : 0,
-                          y: isHovered ? 0 : 20
-                        }}
-                        transition={{ duration: 0.3 }}
-                        className="absolute bottom-6 left-6 right-6 flex gap-3"
-                      >
-                        <Link
-                          href={`/${locale}/projects/${project.id}`}
-                          className="flex-1 px-4 py-3 bg-white text-black rounded-xl font-bold text-center flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                        >
-                          Ver Caso
-                          <FiArrowUpRight />
-                        </Link>
-                        {project.url && (
-                          <a
-                            href={project.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-4 py-3 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all"
-                          >
-                            <FiExternalLink size={20} />
-                          </a>
-                        )}
-                      </motion.div>
-
-                      {/* Category Badge */}
-                      <div className="absolute top-4 right-4">
-                        <span 
-                          className="px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm"
-                          style={{
-                            backgroundColor: `${categoryColor}ee`,
-                            color: 'white'
-                          }}
-                        >
-                          {categoryKey.toUpperCase()}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 line-clamp-2"
-                          style={{ color: 'var(--color-text)' }}>
-                        {project.title}
-                      </h3>
-
-                      <p className="text-sm mb-3"
-                         style={{ color: 'var(--color-text-secondary)' }}>
-                        {project.date}
-                      </p>
-
-                      <div className="pt-3 border-t"
-                           style={{ borderColor: 'var(--color-container-light)' }}>
-                        <p className="text-sm font-semibold mb-1"
-                           style={{ color: categoryColor }}>
-                          {project.owner}
-                        </p>
-                        <p className="text-xs line-clamp-2"
-                           style={{ color: 'var(--color-text-secondary)' }}>
-                          {project.ownerRole}
-                        </p>
-                      </div>
-                    </div>
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-between p-6 md:p-8 z-10">
+                  {/* Tag */}
+                  <div>
+                    <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-[#18F07D]/20 text-[#18F07D] border border-[#18F07D]/30 backdrop-blur-sm">
+                      {/* {project.techStack[0]} */}
+                    </span>
                   </div>
-                </motion.div>
-              );
-            })}
-          </AnimatePresence>
+
+                  {/* Title and Description */}
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-white/70 mb-6 line-clamp-2">
+                      {project.description}
+                    </p>
+
+                    {/* Action Buttons */}
+                    <motion.div 
+                      className="flex gap-3"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ 
+                        opacity: isHovered ? 1 : 0.7,
+                        y: isHovered ? 0 : 10 
+                      }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Link
+                        href={`/${locale}/projects/${project.id}`}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-white text-black rounded-xl font-semibold text-sm hover:bg-[#18F07D] hover:scale-105 transition-all duration-300"
+                      >
+                        {content.portfolio.viewCase}
+                        <FiArrowUpRight className="w-4 h-4" />
+                      </Link>
+                      
+                      {project.url && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-xl font-semibold text-sm backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+                        >
+                          {content.portfolio.visit}
+                          <FiExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
+                    </motion.div>
+                  </div>
+                </div>
+
+                {/* Hover Border Glow */}
+                <div 
+                  className="absolute inset-0 rounded-2xl transition-all duration-500 pointer-events-none"
+                  style={{
+                    boxShadow: isHovered 
+                      ? '0 0 0 1px rgba(24, 240, 125, 0.5), 0 0 40px rgba(24, 240, 125, 0.2)' 
+                      : 'none',
+                  }}
+                />
+              </motion.div>
+            );
+          })}
         </div>
 
-        {/* Counter */}
+        {/* Archive Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center"
+        >
+          <Link
+            href={`/${locale}/projects`}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-transparent text-white rounded-2xl font-semibold border-2 border-white/20 hover:border-[#18F07D] hover:bg-[#18F07D]/10 transition-all duration-300 group"
+          >
+            {content.portfolio.viewArchive}
+            <FiArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
 }
-  

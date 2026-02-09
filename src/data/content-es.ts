@@ -1,3 +1,6 @@
+import dynamic from "next/dynamic";
+import { features } from "process";
+
 export const content = {
   nav: {
     home: 'Inicio',
@@ -170,14 +173,41 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
   },
   portfolio: {
     title: 'Portafolio',
-    subtitle: 'Mis proyectos destacados',
+    subtitle: 'Proyectos destacados que combinan ingeniería agrícola con desarrollo de software',
+    viewArchive: 'Ver archivo de proyectos',
+    viewCase: 'Ver caso',
+    visit: 'Visitar',
     filters: {
       all: 'Todos',
       crops: 'Cultivos',
       design: 'Diseño',
-      programming: 'Programación'
+      programming: 'Programación',
+      eduDev: 'Educación y Desarrollo'
     },
     projects: [
+      {
+        id: 'SaludVault',
+        title: 'Web SaludVault',
+        date: 'Febrero 2026',
+        category: 'programming',
+        image: '/portfolio/portfolio-20.jpg',
+        url: 'https://salud-vault.vercel.app/es',
+        owner: 'Proyecto Personal',
+        ownerRole: 'Product Owner · Web Developer · UX',
+        description: 'SaludVault es una aplicación web para gestionar información de salud de forma segura y privada.',
+        techStack: ['Next.js', 'Tailwind CSS', 'JavaScript', 'Vercel'],
+        metric: '500+ visitantes en el primer mes',
+        span: 'md:col-span-1',
+        rows: 'md:row-span-2',
+        featured: true,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
+      },
       {
         id: 'amaderarte',
         title: 'Web amaderarte',
@@ -187,32 +217,49 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         url: 'https://amaderarte.vercel.app',
         owner: 'Proyecto Personal',
         ownerRole: 'Product Owner · Web Developer · UX',
-        description: `Amaderarte es una aplicación web que permite explorar y comprar piezas únicas de arte en madera creadas por artesanos. La plataforma exhibe una colección diversa de esculturas, mobiliario y objetos decorativos, ofreciendo una experiencia de compra fluida para entusiastas y coleccionistas.`,
+        description: 'Amaderarte es una aplicación web que permite explorar y comprar piezas únicas de arte en madera creadas por artesanos. La plataforma exhibe una colección diversa de esculturas, mobiliario y objetos decorativos, ofreciendo una experiencia de compra fluida para entusiastas y coleccionistas.',
         techStack: ['Next.js', 'Tailwind CSS', 'JavaScript', 'Vercel'],
-        metric: '500+ visitantes en el primer mes'
+        metric: '500+ visitantes en el primer mes',
+        span: 'md:col-span-2',
+        rows: 'md:row-span-1',
+        featured: true,
+        projectJourneys: [
+          {
+            title: 'Llamado',
+            body: 'Los artesanos necesitaban un canal digital que transformara piezas únicas en ventas reales sin perder la esencia del oficio.'
+          },
+          {
+            title: 'Conflicto',
+            body: 'La visibilidad era limitada y el catálogo físico generaba fricción para compradores fuera del alcance local.'
+          },
+          {
+            title: 'Transformación',
+            body: 'Se construyó una plataforma centrada en descubrimiento visual, navegación rápida y un flujo de compra simple.'
+          },
+          {
+            title: 'Resultado',
+            body: 'La experiencia redujo la fricción y aumentó el alcance, logrando más de 500 visitantes en el primer mes.'
+          },
+          {
+            title: 'Regreso',
+            body: 'El taller quedó con una vitrina escalable que permite crecer la oferta y medir el impacto comercial.'
+          }
+        ]
       },
-      {
-        id: 'teatro-tierra',
-        title: 'Web Page Teatro Tierra',
-        date: 'Junio 2024',
-        category: 'programming',
-        image: '/portfolio/portfolio-18.jpg',
-        url: 'https://teatrotierra.org/',
-        owner: 'Claudia Sánchez',
-        ownerRole: 'Productora ejecutiva'
-      },
-      {
-        id: 'dynamic-maps',
+       {
+        id: 'dynamicMaps',
         title: 'Mapas Dinámicos con QGIS y Three.js',
         date: 'Marzo 2023',
         category: 'programming',
         image: '/portfolio/portfolio-17.jpg',
         owner: 'Ingeniería de Riegos',
         ownerRole: 'Materia ofrecida por la Universidad',
-        description:
-          'Visualización 3D de modelos de terreno y mapas compuestos generados en QGIS, renderizados en Three.js para explorar capas y relieve en el navegador.',
+        description: 'Visualización 3D de modelos de terreno y mapas compuestos generados en QGIS, renderizados en Three.js para explorar capas y relieve en el navegador.',
         techStack: ['QGIS', 'Three.js', 'WebGL', 'JavaScript'],
         metric: '2 mapas 3D interactivos',
+        span: 'md:col-span-2',
+        rows: 'md:row-span-2',
+        featured: true,
         maps: [
           {
             title: 'Mapa compuesto',
@@ -225,36 +272,97 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
             src: '/Mapas%203D/Modelo%20de%20Elevaci%C3%B2n%20del%20terreno/Modelo3DNilo.html',
           },
         ],
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
       },
       {
-        id: 'ieee-website',
+        id: 'teatroTierra',
+        title: 'Web Page Teatro Tierra',
+        date: 'Junio 2024',
+        category: 'programming',
+        image: '/portfolio/portfolio-18.jpg',
+        url: 'https://teatrotierra.org/',
+        owner: 'Claudia Sánchez',
+        ownerRole: 'Productora ejecutiva',
+        description: 'Sitio web institucional para Teatro Tierra.',
+        techStack: ['WordPress', 'PHP', 'CSS'],
+        metric: 'Sitio web en producción',
+        featured: false,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
+      },
+      {
+        id: 'ieeeWebsite',
         title: 'Sitio web Rama est. IEEE',
         date: 'Enero 2023',
         category: 'programming',
         image: '/portfolio/portfolio-16.jpg',
         url: 'https://ieeeunal.github.io/Pagina_Web/',
         owner: 'IEEE UNAL',
-        ownerRole: 'Grupo estudiantil universitario'
+        ownerRole: 'Grupo estudiantil universitario',
+        description: 'Sitio web oficial de la rama estudiantil IEEE UNAL.',
+        techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
+        metric: 'Sitio web en producción',
+        featured: false,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
       },
       {
-        id: 'catedra-jeg',
+        id: 'catedraJeg',
         title: 'Sitio web Cátedra JEG',
         date: 'Julio 2022',
-        category: 'programming',
+        category: 'eduDev',
         image: '/portfolio/portfolio-15.jpg',
         url: 'http://www.catedras-bogota.unal.edu.co/catedra-jorge-eliecer-gaitan/2022-1',
         owner: 'Universidad Nacional',
-        ownerRole: 'Materia ofrecida por la Universidad'
+        ownerRole: 'Materia ofrecida por la Universidad',
+        description: 'Sitio web de la Cátedra Jorge Eliécer Gaitán.',
+        techStack: ['Joomla', 'PHP', 'MySQL'],
+        metric: 'Sitio web en producción',
+        featured: false,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
       },
       {
         id: 'innovate',
         title: 'Sitio web Innovate',
         date: 'Diciembre 2021',
-        category: 'programming',
+        category: 'eduDev',
         image: '/portfolio/portfolio-14.jpg',
         url: 'https://ingenieria.unal.edu.co/innovate',
         owner: 'Universidad Nacional',
-        ownerRole: 'Grupo de investigación'
+        ownerRole: 'Grupo de investigación',
+        description: 'Sitio web del grupo de investigación Innovate.',
+        techStack: ['Joomla', 'PHP', 'CSS'],
+        metric: 'Sitio web en producción',
+        featured: false,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
       },
       {
         id: 'deleite',
@@ -264,44 +372,38 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         image: '/portfolio/portfolio-13.jpg',
         url: 'https://restaurante-deleite.herokuapp.com/',
         owner: 'Misión TIC & UTP',
-        ownerRole: 'Proyecto final'
+        ownerRole: 'Proyecto final',
+        description: 'Sistema de gestión para restaurante desarrollado como proyecto final.',
+        techStack: ['React', 'Node.js', 'MongoDB', 'Heroku'],
+        metric: 'Proyecto académico completado',
+        featured: false,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
       },
       {
         id: 'tpi',
         title: 'Sitio web TPi',
         date: 'Agosto 2021',
-        category: 'programming',
+        category: 'eduDev',
         image: '/portfolio/portfolio-7.jpg',
         owner: 'Universidad Nacional',
-        ownerRole: 'Materia ofrecida por la Universidad'
-      },
-      {
-        id: 'tejidos',
-        title: 'Tejidos C&S',
-        date: 'Octubre 2020',
-        category: 'design',
-        image: '/portfolio/portfolio-3.jpg',
-        owner: 'Juan Silva',
-        ownerRole: 'Hijo del propietario del negocio'
-      },
-      {
-        id: 'pacman',
-        title: 'Juego Pacman',
-        date: 'Noviembre 2019',
-        category: 'programming',
-        image: '/portfolio/portfolio-5.jpg',
-        owner: 'Santiago Carvajal',
-        ownerRole: 'Profesor'
-      },
-      {
-        id: 'itawa',
-        title: 'Página ITAWA Band',
-        date: 'Noviembre 2017',
-        category: 'programming',
-        image: '/portfolio/portfolio-1.jpg',
-        url: 'https://www.instagram.com/itawa.co/',
-        owner: 'Juan Ramírez',
-        ownerRole: 'Guitarrista'
+        ownerRole: 'Materia ofrecida por la Universidad',
+        description: 'Sitio web del Taller de Proyectos Interdisciplinarios.',
+        techStack: ['Joomla', 'PHP', 'CSS'],
+        metric: 'Sitio web en producción',
+        featured: false,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
       },
       {
         id: 'cilantro',
@@ -310,7 +412,20 @@ Diferenciador: Dominio de fundamentos de programación robustos para la construc
         category: 'crops',
         image: '/portfolio/portfolio-2.jpg',
         owner: 'Jairo Cuervo',
-        ownerRole: 'Profesor'
+        ownerRole: 'Profesor',
+        description: 'Proyecto académico de producción de cilantro con técnicas sostenibles.',
+        techStack: ['Agricultura', 'Manejo integrado de cultivos'],
+        metric: 'Proyecto académico completado',
+        span: 'md:col-span-1',
+        rows: 'md:row-span-1',
+        featured: true,
+        projectJourneys: [
+          { title: 'Llamado', body: 'Por definir.' },
+          { title: 'Conflicto', body: 'Por definir.' },
+          { title: 'Transformación', body: 'Por definir.' },
+          { title: 'Resultado', body: 'Por definir.' },
+          { title: 'Regreso', body: 'Por definir.' }
+        ]
       }
     ]
   },
