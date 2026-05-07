@@ -23,18 +23,6 @@ const contacts = [
     icon: RiWhatsappLine,
   },
   {
-    label: 'Mail',
-    value: 'julianflancheros@gmail.com',
-    href: 'mailto:julianflancheros@gmail.com',
-    icon: RiMailLine,
-  },
-  {
-    label: 'Web Site',
-    value: 'julianflancheros.js.org',
-    href: 'https://julianflancheros.js.org',
-    icon: RiGlobalLine,
-  },
-  {
     label: 'LinkedIn',
     value: 'julianflancheros',
     href: 'https://www.linkedin.com/in/julianflancheros',
@@ -81,11 +69,11 @@ export default function BusinessCardPage() {
                 </div>
               </div>
 
-              <p className={styles.bio}>
+              {/* <p className={styles.bio}>
                 I&apos;m a student of Agronomic Engineering at the National University and TIC
                 Mission at the UTP in Colombia. I&apos;m specializing in data analysis,
                 Geographic Information Systems (GIS), and responsive web and mobile applications.
-              </p>
+              </p> */}
 
               <div className={styles.contactList}>
                 {contacts.map((item) => {
