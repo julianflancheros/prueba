@@ -1,4 +1,4 @@
-// 'use client';
+﻿// 'use client';
 
 // import { useState, useEffect } from 'react';
 // import Link from 'next/link';
@@ -402,6 +402,10 @@ export default function Navbar({ locale }: NavbarProps) {
     const hash = window.location.hash || '';
     window.location.href = `${nextPath}${hash}`;
   };
+
+  if (['/internship-info', '/business-card'].some((path) => pathname?.endsWith(path))) {
+    return null;
+  }
 
   return (
     <motion.nav

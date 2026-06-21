@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -74,6 +74,10 @@ export default function Footer({ locale }: FooterProps) {
       label: 'Email',
     },
   ];
+
+  if (['/internship-info', '/business-card'].some((path) => pathname?.endsWith(path))) {
+    return null;
+  }
 
   return (
     <footer
