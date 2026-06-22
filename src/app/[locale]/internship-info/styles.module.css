@@ -1,4 +1,4 @@
-﻿.page {
+.page {
   min-height: 100dvh;
   position: relative;
   overflow: hidden;
@@ -7,10 +7,21 @@
   color: var(--color-text);
 }
 
+.animatedBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .38;
+  background-image:
+    radial-gradient(circle at 15% 15%, var(--color-green) 0, transparent 28%),
+    radial-gradient(circle at 85% 85%, var(--color-second-green) 0, transparent 30%);
+  background-size: 180% 180%;
+}
 .glowOne, .glowTwo { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(12px); }
-.glowOne { width: 25rem; height: 25rem; top: -12rem; left: -11rem; background: var(--color-green-alpha); }
-.glowTwo { width: 21rem; height: 21rem; right: -12rem; top: 30rem; background: var(--color-green-alpha); }
-.content { width: min(100%, 660px); position: relative; margin: auto; }
+.glowOne { z-index: 0; width: 25rem; height: 25rem; top: -12rem; left: -11rem; background: var(--color-green-alpha); }
+.glowTwo { z-index: 0; width: 21rem; height: 21rem; right: -12rem; top: 30rem; background: var(--color-green-alpha); }
+.content { z-index: 1; width: min(100%, 660px); position: relative; margin: auto; }
 .hero { text-align: center; }
 .avatar { width: 88px; height: 88px; margin: 0 auto 1.4rem; border: 5px solid var(--color-container-light); border-radius: 50%; display: grid; place-items: center; position: relative; background: linear-gradient(135deg, var(--color-green), var(--color-second-green)); box-shadow: 0 12px 28px var(--color-green-alpha); color: var(--color-body); font-size: 2.35rem; }
 .avatar span { position: absolute; right: 10px; bottom: 5px; color: var(--color-text); font-size: 2rem; transform: rotate(22deg); }
