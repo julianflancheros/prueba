@@ -1,16 +1,18 @@
-﻿import { RiArrowRightUpLine, RiBookOpenLine, RiFileChartLine, RiFileTextLine, RiFlightTakeoffLine, RiGlobalLine, RiMap2Line, RiPresentationLine, RiSendPlaneLine } from 'react-icons/ri';
+'use client';
+
+import { RiArrowRightUpLine, RiBookOpenLine, RiFileChartLine, RiFileTextLine, RiGlobalLine, RiMap2Line, RiPresentationLine, RiSendPlaneLine } from 'react-icons/ri';
 import styles from './styles.module.css';
+import { motion } from 'framer-motion';
 
 const links = [
   ['Ver informe final de pasantía', '[URL_INFORME_FINAL]', RiFileTextLine],
   ['Ver póster de sustentación', '[URL_POSTER]', RiFileChartLine],
-  ['Ver presentación de sustentación', '[URL_PRESENTACION]', RiPresentationLine],
   ['Acceder al sitio web del proyecto', '[URL_SITIO_WEB]', RiGlobalLine],
-  ['Abrir hub completo de la pasantía', '[URL_HUB_NOTION]', RiBookOpenLine],
-  ['Consultar matriz de soporte bibliográfico', '[URL_MATRIZ_BIBLIOGRAFICA]', RiBookOpenLine],
+  ['Ver repositorio de código', 'https://github.com/julianflancheros/AgricolaPiedemonte', RiPresentationLine],
+  ['Abrir hub completo de la pasantía', 'https://app.notion.com/p/julianflancheros/Pasant-a-Agr-cola-Piedemonte-3244fbf462dc80f88fd7d8cd536dc455', RiBookOpenLine],
+  ['Consultar matriz de soporte bibliográfico', 'https://docs.google.com/spreadsheets/d/1cl5-EDZka7tFukexuG5NRRqVUk2QLAqn/edit', RiBookOpenLine],
   ['Ver mapas e índices agronómicos', '[URL_MAPAS]', RiMap2Line],
-  ['Consultar anexos técnicos', '[URL_ANEXOS]', RiFileTextLine],
-  ['Contactar al autor', '[URL_CONTACTO]', RiSendPlaneLine],
+  ['Contactar al autor', 'https://julianflancheros.com/es#contact', RiSendPlaneLine],
 ] as const;
 
 
@@ -27,10 +29,6 @@ function LinkCard({ label, href, Icon }: { label: string; href: string; Icon: an
 function Hero() {
   return (
     <header className={styles.hero}>
-      <div className={styles.avatar} aria-hidden>
-        <RiFlightTakeoffLine />
-        <span>♧</span>
-      </div>
       <p className={styles.eyebrow}>Repositorio digital · 2026</p>
       <h1 className={styles.heading}>Pasantía Agrícola Piedemonte</h1>
       <p className={styles.category}>Drones Piedemonte · Agricultura de precisión · Palma de aceite</p>
@@ -44,6 +42,12 @@ function Hero() {
 export default function InternshipInfoPage() {
   return (
     <main className={styles.page}>
+      <motion.div
+        className={styles.animatedBackground}
+        aria-hidden="true"
+        animate={{ backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'] }}
+        transition={{ duration: 12, ease: 'easeInOut', repeat: Infinity }}
+      />
       <div className={styles.glowOne} />
       <div className={styles.glowTwo} />
       <div className={styles.content}>
