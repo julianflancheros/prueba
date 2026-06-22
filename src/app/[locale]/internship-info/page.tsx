@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { RiArrowRightUpLine, RiBookOpenLine, RiFileChartLine, RiFileTextLine, RiGlobalLine, RiMap2Line, RiPresentationLine, RiSendPlaneLine } from 'react-icons/ri';
 import styles from './styles.module.css';
@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 const links = [
   ['Ver informe final de pasantía', '[URL_INFORME_FINAL]', RiFileTextLine],
-  ['Ver póster de sustentación', '[URL_POSTER]', RiFileChartLine],
-  ['Acceder al sitio web del proyecto', '[URL_SITIO_WEB]', RiGlobalLine],
+  ['Ver póster de sustentación', 'https://drive.google.com/file/d/13-lrduYEl6tYkHghwgnckt0goWnaYVew/view?usp=sharing', RiFileChartLine],
+  ['Acceder al sitio web del proyecto', 'https://agricola-piedemonte.vercel.app/', RiGlobalLine],
   ['Ver repositorio de código', 'https://github.com/julianflancheros/AgricolaPiedemonte', RiPresentationLine],
   ['Abrir hub completo de la pasantía', 'https://app.notion.com/p/julianflancheros/Pasant-a-Agr-cola-Piedemonte-3244fbf462dc80f88fd7d8cd536dc455', RiBookOpenLine],
   ['Consultar matriz de soporte bibliográfico', 'https://docs.google.com/spreadsheets/d/1cl5-EDZka7tFukexuG5NRRqVUk2QLAqn/edit', RiBookOpenLine],
