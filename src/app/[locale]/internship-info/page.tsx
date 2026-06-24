@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 
 const links = [
   ['Ver informe final de pasantía', '[URL_INFORME_FINAL]', RiFileTextLine],
-  ['Ver póster de sustentación', 'https://drive.google.com/file/d/13-lrduYEl6tYkHghwgnckt0goWnaYVew/view?usp=sharing', RiFileChartLine],
+  ['Ver resumen Coloquio', 'https://unaledu-my.sharepoint.com/:b:/g/personal/jflancherosm_unal_edu_co/IQBqvG5SBxSAQZwRDM4kORzyARphMH4JvT1fxhUo1UVGJp0?e=O0Esa7', RiFileTextLine],
+  ['Ver póster de sustentación', 'https://unaledu-my.sharepoint.com/:b:/g/personal/jflancherosm_unal_edu_co/IQDe3Up2wG_HSLC-S0l9yqJ3AVreexG2WNAb0Tj2Ydg5pnw', RiFileChartLine],
   ['Acceder al sitio web del proyecto', 'https://agricola-piedemonte.vercel.app/', RiGlobalLine],
   ['Ver repositorio de código', 'https://github.com/julianflancheros/AgricolaPiedemonte', RiPresentationLine],
   ['Abrir hub completo de la pasantía', 'https://app.notion.com/p/julianflancheros/Pasant-a-Agr-cola-Piedemonte-3244fbf462dc80f88fd7d8cd536dc455', RiBookOpenLine],
