@@ -4,7 +4,7 @@ import { content as contentEs } from '@/data/content-es';
 import { content as contentEn } from '@/data/content-en';
 
 type PageProps = {
-  params: { locale: 'es' | 'en'; id: string };
+  params: Promise<{ locale: 'es' | 'en'; id: string }>;
 };
 
 const journeyByIdEn: Record<string, { title: string; body: string }[]> = {
@@ -54,12 +54,13 @@ const journeyByIdEn: Record<string, { title: string; body: string }[]> = {
   ],
 };
 
-export default function ProjectPage({ params }: PageProps) {
-  const locale = params.locale === 'en' ? 'en' : 'es';
+export default async function ProjectPage({ params }: PageProps) {
+  const { locale: localeParam, id } = await params;
+  const locale = localeParam === 'en' ? 'en' : 'es';
   const content = locale === 'es' ? contentEs : contentEn;
   
   // Buscar el proyecto directamente en el array
-  const project = content.portfolio.projects.find((p) => p.id === params.id);
+  const project = content.portfolio.projects.find((p) => p.id === id);
 
   if (!project) {
     notFound();
@@ -68,7 +69,7 @@ export default function ProjectPage({ params }: PageProps) {
   // Obtener el journey del proyecto
   const journeyById = locale === 'es' 
     ? project.projectJourneys 
-    : journeyByIdEn[params.id];
+    : journeyByIdEn[id];
 
   const sections =
     journeyById ?? [
