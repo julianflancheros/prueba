@@ -98,12 +98,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { locale?: 'es' | 'en' };
 }) {
-  const locale = params?.locale === 'en' ? 'en' : 'es';
+  const locale = 'es';
 
   return (
     <html
