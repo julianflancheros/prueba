@@ -2,10 +2,22 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'media.licdn.com',
-      'storage.googleapis.com',
-      'julianflancheros.js.org'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'julianflancheros.com',
+        pathname: '/**',
+      },
     ],
   },
 }
